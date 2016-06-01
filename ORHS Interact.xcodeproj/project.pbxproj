@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */; };
+		56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */; };
+		56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */; };
+		56FF34E01CFE7A5A00B6CE0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34DF1CFE7A5A00B6CE0E /* Assets.xcassets */; };
+		56FF34E31CFE7A5A00B6CE0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */; };
+		56FF34EE1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34ED1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift */; };
+		56FF34F91CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34F81CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56FF34EA1CFE7A5A00B6CE0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56FF34CD1CFE7A5900B6CE0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56FF34D41CFE7A5900B6CE0E;
+			remoteInfo = "ORHS Interact";
+		};
+		56FF34F51CFE7A5A00B6CE0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56FF34CD1CFE7A5900B6CE0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56FF34D41CFE7A5900B6CE0E;
+			remoteInfo = "ORHS Interact";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORHS Interact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56FF34DD1CFE7A5A00B6CE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56FF34DF1CFE7A5A00B6CE0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56FF34E21CFE7A5A00B6CE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56FF34E41CFE7A5A00B6CE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56FF34E91CFE7A5A00B6CE0E /* ORHS InteractTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ORHS InteractTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FF34ED1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORHS_InteractTests.swift; sourceTree = "<group>"; };
+		56FF34EF1CFE7A5A00B6CE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56FF34F41CFE7A5A00B6CE0E /* ORHS InteractUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ORHS InteractUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FF34F81CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORHS_InteractUITests.swift; sourceTree = "<group>"; };
+		56FF34FA1CFE7A5A00B6CE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56FF34D21CFE7A5900B6CE0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56FF34E61CFE7A5A00B6CE0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56FF34F11CFE7A5A00B6CE0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56FF34CC1CFE7A5900B6CE0E = {
+			isa = PBXGroup;
+			children = (
+				56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */,
+				56FF34EC1CFE7A5A00B6CE0E /* ORHS InteractTests */,
+				56FF34F71CFE7A5A00B6CE0E /* ORHS InteractUITests */,
+				56FF34D61CFE7A5A00B6CE0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56FF34D61CFE7A5A00B6CE0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */,
+				56FF34E91CFE7A5A00B6CE0E /* ORHS InteractTests.xctest */,
+				56FF34F41CFE7A5A00B6CE0E /* ORHS InteractUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */ = {
+			isa = PBXGroup;
+			children = (
+				56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */,
+				56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */,
+				56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */,
+				56FF34DF1CFE7A5A00B6CE0E /* Assets.xcassets */,
+				56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */,
+				56FF34E41CFE7A5A00B6CE0E /* Info.plist */,
+			);
+			path = "ORHS Interact";
+			sourceTree = "<group>";
+		};
+		56FF34EC1CFE7A5A00B6CE0E /* ORHS InteractTests */ = {
+			isa = PBXGroup;
+			children = (
+				56FF34ED1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift */,
+				56FF34EF1CFE7A5A00B6CE0E /* Info.plist */,
+			);
+			path = "ORHS InteractTests";
+			sourceTree = "<group>";
+		};
+		56FF34F71CFE7A5A00B6CE0E /* ORHS InteractUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56FF34F81CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift */,
+				56FF34FA1CFE7A5A00B6CE0E /* Info.plist */,
+			);
+			path = "ORHS InteractUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56FF34D41CFE7A5900B6CE0E /* ORHS Interact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56FF34FD1CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS Interact" */;
+			buildPhases = (
+				56FF34D11CFE7A5900B6CE0E /* Sources */,
+				56FF34D21CFE7A5900B6CE0E /* Frameworks */,
+				56FF34D31CFE7A5900B6CE0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ORHS Interact";
+			productName = "ORHS Interact";
+			productReference = 56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56FF34E81CFE7A5A00B6CE0E /* ORHS InteractTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56FF35001CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractTests" */;
+			buildPhases = (
+				56FF34E51CFE7A5A00B6CE0E /* Sources */,
+				56FF34E61CFE7A5A00B6CE0E /* Frameworks */,
+				56FF34E71CFE7A5A00B6CE0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56FF34EB1CFE7A5A00B6CE0E /* PBXTargetDependency */,
+			);
+			name = "ORHS InteractTests";
+			productName = "ORHS InteractTests";
+			productReference = 56FF34E91CFE7A5A00B6CE0E /* ORHS InteractTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56FF34F31CFE7A5A00B6CE0E /* ORHS InteractUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56FF35031CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractUITests" */;
+			buildPhases = (
+				56FF34F01CFE7A5A00B6CE0E /* Sources */,
+				56FF34F11CFE7A5A00B6CE0E /* Frameworks */,
+				56FF34F21CFE7A5A00B6CE0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56FF34F61CFE7A5A00B6CE0E /* PBXTargetDependency */,
+			);
+			name = "ORHS InteractUITests";
+			productName = "ORHS InteractUITests";
+			productReference = 56FF34F41CFE7A5A00B6CE0E /* ORHS InteractUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56FF34CD1CFE7A5900B6CE0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Web and App Development";
+				TargetAttributes = {
+					56FF34D41CFE7A5900B6CE0E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					56FF34E81CFE7A5A00B6CE0E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 56FF34D41CFE7A5900B6CE0E;
+					};
+					56FF34F31CFE7A5A00B6CE0E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 56FF34D41CFE7A5900B6CE0E;
+					};
+				};
+			};
+			buildConfigurationList = 56FF34D01CFE7A5900B6CE0E /* Build configuration list for PBXProject "ORHS Interact" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56FF34CC1CFE7A5900B6CE0E;
+			productRefGroup = 56FF34D61CFE7A5A00B6CE0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56FF34D41CFE7A5900B6CE0E /* ORHS Interact */,
+				56FF34E81CFE7A5A00B6CE0E /* ORHS InteractTests */,
+				56FF34F31CFE7A5A00B6CE0E /* ORHS InteractUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56FF34D31CFE7A5900B6CE0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56FF34E31CFE7A5A00B6CE0E /* LaunchScreen.storyboard in Resources */,
+				56FF34E01CFE7A5A00B6CE0E /* Assets.xcassets in Resources */,
+				56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56FF34E71CFE7A5A00B6CE0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56FF34F21CFE7A5A00B6CE0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56FF34D11CFE7A5900B6CE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */,
+				56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56FF34E51CFE7A5A00B6CE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56FF34EE1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56FF34F01CFE7A5A00B6CE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56FF34F91CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56FF34EB1CFE7A5A00B6CE0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56FF34D41CFE7A5900B6CE0E /* ORHS Interact */;
+			targetProxy = 56FF34EA1CFE7A5A00B6CE0E /* PBXContainerItemProxy */;
+		};
+		56FF34F61CFE7A5A00B6CE0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56FF34D41CFE7A5900B6CE0E /* ORHS Interact */;
+			targetProxy = 56FF34F51CFE7A5A00B6CE0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56FF34DD1CFE7A5A00B6CE0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56FF34E21CFE7A5A00B6CE0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56FF34FB1CFE7A5A00B6CE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56FF34FC1CFE7A5A00B6CE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56FF34FE1CFE7A5A00B6CE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ORHS Interact/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-Interact";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		56FF34FF1CFE7A5A00B6CE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ORHS Interact/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-Interact";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		56FF35011CFE7A5A00B6CE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ORHS InteractTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ORHS Interact.app/ORHS Interact";
+			};
+			name = Debug;
+		};
+		56FF35021CFE7A5A00B6CE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ORHS InteractTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ORHS Interact.app/ORHS Interact";
+			};
+			name = Release;
+		};
+		56FF35041CFE7A5A00B6CE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ORHS InteractUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ORHS Interact";
+			};
+			name = Debug;
+		};
+		56FF35051CFE7A5A00B6CE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ORHS InteractUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ORHS Interact";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56FF34D01CFE7A5900B6CE0E /* Build configuration list for PBXProject "ORHS Interact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56FF34FB1CFE7A5A00B6CE0E /* Debug */,
+				56FF34FC1CFE7A5A00B6CE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56FF34FD1CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS Interact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56FF34FE1CFE7A5A00B6CE0E /* Debug */,
+				56FF34FF1CFE7A5A00B6CE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56FF35001CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56FF35011CFE7A5A00B6CE0E /* Debug */,
+				56FF35021CFE7A5A00B6CE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56FF35031CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56FF35041CFE7A5A00B6CE0E /* Debug */,
+				56FF35051CFE7A5A00B6CE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56FF34CD1CFE7A5900B6CE0E /* Project object */;
+}
