@@ -26,15 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interactbackground_80lightness-2" translatesAutoresizingMaskIntoConstraints="NO" id="qgi-22-liV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interactlogo-2" translatesAutoresizingMaskIntoConstraints="NO" id="Eeb-6B-v02">
-                                <rect key="frame" x="200" y="158" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Eeb-6B-v02" secondAttribute="height" multiplier="1:1" id="Ocb-3X-VE2"/>
-                                    <constraint firstAttribute="height" constant="200" id="bD9-Wf-fGB"/>
-                                    <constraint firstAttribute="width" constant="200" id="vBH-E2-GeY"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please use your ORHS Google Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-P7-O6K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Please use your ORHS Google Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-P7-O6K">
                                 <rect key="frame" x="150" y="467" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="A1F-3b-rVd"/>
@@ -55,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="Oak Ridge High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-7G-2Ps">
-                                <rect key="frame" x="210" y="129" width="181" height="21"/>
+                                <rect key="frame" x="210" y="135" width="181" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="181" id="Ocu-oV-CMB"/>
                                     <constraint firstAttribute="height" constant="21" id="VHa-FA-Tb5"/>
@@ -65,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-O0-5zU">
-                                <rect key="frame" x="279" y="366" width="42" height="14"/>
+                                <rect key="frame" x="279" y="378" width="42" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="IhP-VR-yXF"/>
                                 </constraints>
@@ -81,16 +73,22 @@
                                     <constraint firstAttribute="height" constant="50" id="yza-7u-J8z"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interactlogo-2" translatesAutoresizingMaskIntoConstraints="NO" id="Eeb-6B-v02">
+                                <rect key="frame" x="197" y="164" width="206" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Eeb-6B-v02" secondAttribute="height" multiplier="1:1" id="Ocb-3X-VE2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LVR-7G-2Ps" firstAttribute="centerX" secondItem="Eeb-6B-v02" secondAttribute="centerX" id="2Gm-h2-tEG"/>
                             <constraint firstItem="faf-a1-bXE" firstAttribute="centerX" secondItem="h0d-O0-5zU" secondAttribute="centerX" id="43a-5t-GwG"/>
-                            <constraint firstItem="faf-a1-bXE" firstAttribute="top" secondItem="h0d-O0-5zU" secondAttribute="bottom" constant="20" id="4T7-V7-qlC"/>
+                            <constraint firstItem="faf-a1-bXE" firstAttribute="top" secondItem="h0d-O0-5zU" secondAttribute="bottom" constant="8" symbolic="YES" id="4T7-V7-qlC"/>
                             <constraint firstItem="WLr-nk-ovD" firstAttribute="centerX" secondItem="LVR-7G-2Ps" secondAttribute="centerX" id="APP-pc-Ddc"/>
                             <constraint firstItem="faf-a1-bXE" firstAttribute="centerX" secondItem="dXD-P7-O6K" secondAttribute="centerX" id="FN5-HN-s6i"/>
                             <constraint firstItem="Eeb-6B-v02" firstAttribute="top" secondItem="LVR-7G-2Ps" secondAttribute="bottom" constant="8" symbolic="YES" id="FSr-fG-HHM"/>
-                            <constraint firstItem="LVR-7G-2Ps" firstAttribute="top" secondItem="WLr-nk-ovD" secondAttribute="bottom" constant="2" id="Fj3-Ud-hs9"/>
+                            <constraint firstItem="LVR-7G-2Ps" firstAttribute="top" secondItem="WLr-nk-ovD" secondAttribute="bottom" constant="8" symbolic="YES" id="Fj3-Ud-hs9"/>
                             <constraint firstItem="qgi-22-liV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Imk-Px-UgX"/>
                             <constraint firstItem="WLr-nk-ovD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NUN-Pz-O1l"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dXD-P7-O6K" secondAttribute="bottom" constant="112" id="SME-CX-TJC"/>
@@ -103,10 +101,32 @@
                             <constraint firstItem="WLr-nk-ovD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="ztY-O3-gyp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="interactbackground" destination="qgi-22-liV" id="QUP-u9-63H"/>
+                        <outlet property="signInButton" destination="faf-a1-bXE" id="PXI-ez-RLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="402" y="223"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XKV-ee-e4D">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="fPN-hr-srX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a7j-jV-Azx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYX-h5-pvp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NVd-YO-hMe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbb-CP-jis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="223"/>
         </scene>
     </scenes>
     <resources>
