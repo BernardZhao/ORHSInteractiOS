@@ -1,0 +1,6 @@
+framework module Pods_ORHS_InteractTests {
+  umbrella header "Pods-ORHS InteractTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

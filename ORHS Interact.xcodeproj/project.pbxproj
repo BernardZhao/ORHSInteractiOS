@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E54E4817E9BC3B5D8C5D666 /* Pods_ORHS_Interact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22B89D04ECB3DA7CC430964 /* Pods_ORHS_Interact.framework */; };
+		56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */; };
+		5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
+		5697303C1D1357F100B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
+		5697303D1D1357F200B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
 		56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */; };
 		56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */; };
 		56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */; };
@@ -14,6 +19,8 @@
 		56FF34E31CFE7A5A00B6CE0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */; };
 		56FF34EE1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34ED1CFE7A5A00B6CE0E /* ORHS_InteractTests.swift */; };
 		56FF34F91CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34F81CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift */; };
+		7CB6634436C9B930A8B1FB20 /* Pods_ORHS_InteractUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDBEA212D72820921143AD3 /* Pods_ORHS_InteractUITests.framework */; };
+		9970AD18E97B4E23E8E59CA3 /* Pods_ORHS_InteractTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784DB6A318194E546DA549A2 /* Pods_ORHS_InteractTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BD85B20B19989347FF85EE7 /* Pods-ORHS InteractTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS InteractTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS InteractTests/Pods-ORHS InteractTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18A99F1F1C78582024E63288 /* Pods-ORHS InteractUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS InteractUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS InteractUITests/Pods-ORHS InteractUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CA70290FB29AA2A931DFEA2 /* Pods-ORHS InteractTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS InteractTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS InteractTests/Pods-ORHS InteractTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DDBEA212D72820921143AD3 /* Pods_ORHS_InteractUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORHS_InteractUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		5697303A1D1357CF00B9592C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5697303E1D135F0100B9592C /* ORHS Interact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORHS Interact-Bridging-Header.h"; sourceTree = "<group>"; };
 		56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORHS Interact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 1; };
+		56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 1; };
 		56FF34DD1CFE7A5A00B6CE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56FF34DF1CFE7A5A00B6CE0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56FF34E21CFE7A5A00B6CE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +61,11 @@
 		56FF34F41CFE7A5A00B6CE0E /* ORHS InteractUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ORHS InteractUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FF34F81CFE7A5A00B6CE0E /* ORHS_InteractUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORHS_InteractUITests.swift; sourceTree = "<group>"; };
 		56FF34FA1CFE7A5A00B6CE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784DB6A318194E546DA549A2 /* Pods_ORHS_InteractTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORHS_InteractTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A9B6C5F55D65422EAE25999 /* Pods-ORHS Interact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS Interact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS Interact/Pods-ORHS Interact.debug.xcconfig"; sourceTree = "<group>"; };
+		BFFE9EE53D245CD395C43B0C /* Pods-ORHS InteractUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS InteractUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS InteractUITests/Pods-ORHS InteractUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C22B89D04ECB3DA7CC430964 /* Pods_ORHS_Interact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORHS_Interact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBFB9835581A5DFCBA5A8C62 /* Pods-ORHS Interact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS Interact.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS Interact/Pods-ORHS Interact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E54E4817E9BC3B5D8C5D666 /* Pods_ORHS_Interact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9970AD18E97B4E23E8E59CA3 /* Pods_ORHS_InteractTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +89,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB6634436C9B930A8B1FB20 /* Pods_ORHS_InteractUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06E2C2E05326E89009B1DA08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B6C5F55D65422EAE25999 /* Pods-ORHS Interact.debug.xcconfig */,
+				FBFB9835581A5DFCBA5A8C62 /* Pods-ORHS Interact.release.xcconfig */,
+				0BD85B20B19989347FF85EE7 /* Pods-ORHS InteractTests.debug.xcconfig */,
+				3CA70290FB29AA2A931DFEA2 /* Pods-ORHS InteractTests.release.xcconfig */,
+				18A99F1F1C78582024E63288 /* Pods-ORHS InteractUITests.debug.xcconfig */,
+				BFFE9EE53D245CD395C43B0C /* Pods-ORHS InteractUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F9542907EE6B25751A3029B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C22B89D04ECB3DA7CC430964 /* Pods_ORHS_Interact.framework */,
+				784DB6A318194E546DA549A2 /* Pods_ORHS_InteractTests.framework */,
+				3DDBEA212D72820921143AD3 /* Pods_ORHS_InteractUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56FF34CC1CFE7A5900B6CE0E = {
 			isa = PBXGroup;
 			children = (
+				5697303A1D1357CF00B9592C /* GoogleService-Info.plist */,
+				56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */,
 				56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */,
 				56FF34EC1CFE7A5A00B6CE0E /* ORHS InteractTests */,
 				56FF34F71CFE7A5A00B6CE0E /* ORHS InteractUITests */,
 				56FF34D61CFE7A5A00B6CE0E /* Products */,
+				06E2C2E05326E89009B1DA08 /* Pods */,
+				4F9542907EE6B25751A3029B /* Frameworks */,
+				5697303E1D135F0100B9592C /* ORHS Interact-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56FF34FD1CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS Interact" */;
 			buildPhases = (
+				22DE58EF81659430C5BF363B /* [CP] Check Pods Manifest.lock */,
 				56FF34D11CFE7A5900B6CE0E /* Sources */,
 				56FF34D21CFE7A5900B6CE0E /* Frameworks */,
 				56FF34D31CFE7A5900B6CE0E /* Resources */,
+				407D7206EE1C27EFCC0A32B9 /* [CP] Embed Pods Frameworks */,
+				2672C981C3343A2C8823E116 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56FF35001CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractTests" */;
 			buildPhases = (
+				EF32107FE4D565266BAA7010 /* [CP] Check Pods Manifest.lock */,
 				56FF34E51CFE7A5A00B6CE0E /* Sources */,
 				56FF34E61CFE7A5A00B6CE0E /* Frameworks */,
 				56FF34E71CFE7A5A00B6CE0E /* Resources */,
+				294263C3DEA5831B265376E7 /* [CP] Embed Pods Frameworks */,
+				6E51E1BCD6221F6039FA3B49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56FF35031CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractUITests" */;
 			buildPhases = (
+				1B5385F60FF69FD37B1D51A9 /* [CP] Check Pods Manifest.lock */,
 				56FF34F01CFE7A5A00B6CE0E /* Sources */,
 				56FF34F11CFE7A5A00B6CE0E /* Frameworks */,
 				56FF34F21CFE7A5A00B6CE0E /* Resources */,
+				8E027A6D44BDA66C9FF2BC83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +251,7 @@
 				TargetAttributes = {
 					56FF34D41CFE7A5900B6CE0E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W54MNZG9S5;
 					};
 					56FF34E81CFE7A5A00B6CE0E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -231,6 +290,8 @@
 			files = (
 				56FF34E31CFE7A5A00B6CE0E /* LaunchScreen.storyboard in Resources */,
 				56FF34E01CFE7A5A00B6CE0E /* Assets.xcassets in Resources */,
+				5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */,
+				56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */,
 				56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5697303C1D1357F100B9592C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +308,134 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5697303D1D1357F200B9592C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B5385F60FF69FD37B1D51A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22DE58EF81659430C5BF363B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2672C981C3343A2C8823E116 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ORHS Interact/Pods-ORHS Interact-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		294263C3DEA5831B265376E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ORHS InteractTests/Pods-ORHS InteractTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		407D7206EE1C27EFCC0A32B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ORHS Interact/Pods-ORHS Interact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E51E1BCD6221F6039FA3B49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ORHS InteractTests/Pods-ORHS InteractTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E027A6D44BDA66C9FF2BC83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ORHS InteractUITests/Pods-ORHS InteractUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF32107FE4D565266BAA7010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56FF34D11CFE7A5900B6CE0E /* Sources */ = {
@@ -397,28 +583,42 @@
 		};
 		56FF34FE1CFE7A5A00B6CE0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A9B6C5F55D65422EAE25999 /* Pods-ORHS Interact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ORHS Interact/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-Interact";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ORHS Interact-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		56FF34FF1CFE7A5A00B6CE0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBFB9835581A5DFCBA5A8C62 /* Pods-ORHS Interact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ORHS Interact/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-Interact";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ORHS Interact-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		56FF35011CFE7A5A00B6CE0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD85B20B19989347FF85EE7 /* Pods-ORHS InteractTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "ORHS InteractTests/Info.plist";
@@ -431,6 +631,7 @@
 		};
 		56FF35021CFE7A5A00B6CE0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CA70290FB29AA2A931DFEA2 /* Pods-ORHS InteractTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "ORHS InteractTests/Info.plist";
@@ -443,6 +644,7 @@
 		};
 		56FF35041CFE7A5A00B6CE0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A99F1F1C78582024E63288 /* Pods-ORHS InteractUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "ORHS InteractUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +656,7 @@
 		};
 		56FF35051CFE7A5A00B6CE0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFE9EE53D245CD395C43B0C /* Pods-ORHS InteractUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "ORHS InteractUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +685,7 @@
 				56FF34FF1CFE7A5A00B6CE0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56FF35001CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +694,7 @@
 				56FF35021CFE7A5A00B6CE0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56FF35031CFE7A5A00B6CE0E /* Build configuration list for PBXNativeTarget "ORHS InteractUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +703,7 @@
 				56FF35051CFE7A5A00B6CE0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
