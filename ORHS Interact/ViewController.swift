@@ -11,43 +11,64 @@ import UIKit
 class ViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var signInButton: GIDSignInButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		GIDSignIn.sharedInstance().uiDelegate = self
-		GIDSignIn.sharedInstance().signInSilently()
-        
-        
-        
-        // Set vertical effect
-        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
-                                                               type: .TiltAlongVerticalAxis)
-        verticalMotionEffect.minimumRelativeValue = -10
-        verticalMotionEffect.maximumRelativeValue = 10
-        
-        // Set horizontal effect
-        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
-                                                                 type: .TiltAlongHorizontalAxis)
-        horizontalMotionEffect.minimumRelativeValue = -10
-        horizontalMotionEffect.maximumRelativeValue = 10
-        
-        // Create group to combine both
-        let group = UIMotionEffectGroup()
-        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
-        
-        // Add both effects to your view
-        interactbackground.addMotionEffect(group)
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var interactbackground: UIImageView!
+    @IBOutlet weak var signOutButton: UIButton!
+
 	
-	func refreshInterface() {
+		func refreshInterface() {
 		if let currentUser = GIDSignIn.sharedInstance().currentUser {
+			debugPrint("refresh")
 			signInButton.hidden = true
-		}
+            signOutButton.hidden = false
+            statusLabel.text = "Welcome, \(currentUser.profile.name)!"
+            //[self.performSegueWithIdentifier("LoginSegue", sender: self)];
+        } else {
+			debugPrint("no refresh")
+            signInButton.hidden = false
+            signOutButton.hidden = true
+            statusLabel.text = "Sign in, stranger."
 	}
 	
-    @IBOutlet weak var interactbackground: UIImageView!
-    
+	}
+    @IBAction func signOutWasPressed(sender: AnyObject) {
+        GIDSignIn.sharedInstance().signOut()
+		debugPrint("Nigga signed out")
+        refreshInterface()
+    }
+
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		refreshInterface()
+		(UIApplication.sharedApplication().delegate as! AppDelegate).signInCallback = refreshInterface
+		GIDSignIn.sharedInstance().uiDelegate = self
+		GIDSignIn.sharedInstance().signInSilently()
+		
+		// Set vertical effect
+		let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
+		                                                       type: .TiltAlongVerticalAxis)
+		verticalMotionEffect.minimumRelativeValue = -20
+		verticalMotionEffect.maximumRelativeValue = 20
+		
+		// Set horizontal effect
+		
+		let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
+		                                                         type: .TiltAlongHorizontalAxis)
+		horizontalMotionEffect.minimumRelativeValue = -20
+		horizontalMotionEffect.maximumRelativeValue = 20
+		
+		// Create group to combine both
+		let group = UIMotionEffectGroup()
+		group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+		
+		// Add both effects to your view
+		interactbackground.addMotionEffect(group)
+		// Do any additional setup after loading the view, typically from a nib.
+		
+	}
+	
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
+	
     var window: UIWindow?
 	var signInCallback: (()->())?
 
@@ -29,18 +29,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 	
 	func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
 		if (error != nil) {
-			print("Looks like we got a sign-in error: \(error)")
+			print("Looks like we got a sign-in error: \(error.localizedDescription)")
 			// Common error includes user clicking cancel.
 		} else {
-			print("Our user signed in! \(user)")
+			let userID = user.userID
+			let idToken = user.authentication.idToken
+			let fullName = user.profile.name
+			let givenName = user.profile.givenName
+			let familyName = user.profile.familyName
+			let email = user.profile.email
+			print("Our user signed in! \(user) \(fullName)")
 		}
 	}
 	
-	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-		return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: sourceApplication, annotation: annotation)
+	/*func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
+		<#code#>
+	}*/
+	
+	func application(application: UIApplication,
+	                 openURL url: NSURL, options: [String: AnyObject]) -> Bool {
+		return GIDSignIn.sharedInstance().handleURL(url,
+		                                            sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as? String,
+		                                            annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
 	}
+	
 
-    func applicationWillResignActive(application: UIApplication) {
+	
+	func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }

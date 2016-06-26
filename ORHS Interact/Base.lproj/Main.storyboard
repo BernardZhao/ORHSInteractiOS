@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ORHS_Interact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ORHS_Interact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interactbackground_80lightness-2" translatesAutoresizingMaskIntoConstraints="NO" id="qgi-22-liV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="-20" width="600" height="640"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Please use your ORHS Google Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-P7-O6K">
                                 <rect key="frame" x="150" y="467" width="300" height="21"/>
@@ -56,17 +56,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-O0-5zU">
-                                <rect key="frame" x="279" y="378" width="42" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="IhP-VR-yXF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faf-a1-bXE" customClass="GIDSignInButton">
-                                <rect key="frame" x="225" y="400" width="150" height="50"/>
+                                <rect key="frame" x="225" y="409" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Imh-ja-2vA"/>
@@ -79,12 +70,30 @@
                                     <constraint firstAttribute="width" secondItem="Eeb-6B-v02" secondAttribute="height" multiplier="1:1" id="Ocb-3X-VE2"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jm-nT-kZp">
+                                <rect key="frame" x="250" y="501" width="100" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBQ-zR-xcB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-O0-5zU">
+                                <rect key="frame" x="279" y="378" width="42" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="IhP-VR-yXF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LVR-7G-2Ps" firstAttribute="centerX" secondItem="Eeb-6B-v02" secondAttribute="centerX" id="2Gm-h2-tEG"/>
                             <constraint firstItem="faf-a1-bXE" firstAttribute="centerX" secondItem="h0d-O0-5zU" secondAttribute="centerX" id="43a-5t-GwG"/>
-                            <constraint firstItem="faf-a1-bXE" firstAttribute="top" secondItem="h0d-O0-5zU" secondAttribute="bottom" constant="8" symbolic="YES" id="4T7-V7-qlC"/>
+                            <constraint firstItem="faf-a1-bXE" firstAttribute="top" secondItem="h0d-O0-5zU" secondAttribute="bottom" constant="11" id="4T7-V7-qlC"/>
                             <constraint firstItem="WLr-nk-ovD" firstAttribute="centerX" secondItem="LVR-7G-2Ps" secondAttribute="centerX" id="APP-pc-Ddc"/>
                             <constraint firstItem="faf-a1-bXE" firstAttribute="centerX" secondItem="dXD-P7-O6K" secondAttribute="centerX" id="FN5-HN-s6i"/>
                             <constraint firstItem="Eeb-6B-v02" firstAttribute="top" secondItem="LVR-7G-2Ps" secondAttribute="bottom" constant="8" symbolic="YES" id="FSr-fG-HHM"/>
@@ -95,20 +104,25 @@
                             <constraint firstItem="Eeb-6B-v02" firstAttribute="centerX" secondItem="h0d-O0-5zU" secondAttribute="centerX" id="T0k-eh-Kk1"/>
                             <constraint firstItem="qgi-22-liV" firstAttribute="centerX" secondItem="dXD-P7-O6K" secondAttribute="centerX" id="TOJ-lN-JyJ"/>
                             <constraint firstItem="h0d-O0-5zU" firstAttribute="top" secondItem="Eeb-6B-v02" secondAttribute="bottom" constant="8" symbolic="YES" id="UMv-rm-NrH"/>
-                            <constraint firstItem="qgi-22-liV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k1a-et-R8N"/>
-                            <constraint firstItem="qgi-22-liV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oMJ-M9-vXy"/>
-                            <constraint firstItem="dXD-P7-O6K" firstAttribute="top" secondItem="faf-a1-bXE" secondAttribute="bottom" constant="17" id="tFT-Y9-zXf"/>
+                            <constraint firstItem="7jm-nT-kZp" firstAttribute="top" secondItem="dXD-P7-O6K" secondAttribute="bottom" constant="13" id="UQx-RA-nn4"/>
+                            <constraint firstItem="7jm-nT-kZp" firstAttribute="centerX" secondItem="dXD-P7-O6K" secondAttribute="centerX" constant="-1" id="iCU-i7-U2o"/>
+                            <constraint firstItem="qgi-22-liV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="k1a-et-R8N"/>
+                            <constraint firstItem="qgi-22-liV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="20" id="oMJ-M9-vXy"/>
+                            <constraint firstItem="dXD-P7-O6K" firstAttribute="top" secondItem="faf-a1-bXE" secondAttribute="bottom" constant="8" id="tFT-Y9-zXf"/>
                             <constraint firstItem="WLr-nk-ovD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="ztY-O3-gyp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="interactbackground" destination="qgi-22-liV" id="QUP-u9-63H"/>
+                        <outlet property="interactbackground" destination="qgi-22-liV" id="pgN-vz-JCg"/>
                         <outlet property="signInButton" destination="faf-a1-bXE" id="PXI-ez-RLJ"/>
+                        <outlet property="signOutButton" destination="7jm-nT-kZp" id="fZX-I5-JVS"/>
+                        <outlet property="statusLabel" destination="h0d-O0-5zU" id="yof-bj-sT6"/>
+                        <segue destination="fPN-hr-srX" kind="presentation" identifier="LoginSegue" id="ZVF-4G-60z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="223"/>
+            <point key="canvasLocation" x="239" y="223"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XKV-ee-e4D">
