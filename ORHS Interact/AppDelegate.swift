@@ -22,8 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
         
         GIDSignIn.sharedInstance().delegate = self
-        
-        
+
+
+		
+		UITabBar.appearance().tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
         return true
     }
 	
@@ -32,13 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 			print("Looks like we got a sign-in error: \(error.localizedDescription)")
 			// Common error includes user clicking cancel.
 		} else {
-			let userID = user.userID
-			let idToken = user.authentication.idToken
+			//let userID = user.userID
+			//let idToken = user.authentication.idToken
 			let fullName = user.profile.name
-			let givenName = user.profile.givenName
-			let familyName = user.profile.familyName
+			//let givenName = user.profile.givenName
+			//let familyName = user.profile.familyName
 			let email = user.profile.email
-			print("Our user signed in! \(user) \(fullName)")
+			print("Our user signed in! \(user) \(fullName) \(email)")
+			signInCallback!()
 		}
 	}
 	

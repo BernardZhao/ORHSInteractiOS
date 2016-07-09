@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		0E54E4817E9BC3B5D8C5D666 /* Pods_ORHS_Interact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22B89D04ECB3DA7CC430964 /* Pods_ORHS_Interact.framework */; };
 		56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */; };
+		568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */; };
 		5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
 		5697303C1D1357F100B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
 		5697303D1D1357F200B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
-		56B640181D1B49D400F63FE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B640171D1B49D400F63FE5 /* MainViewController.swift */; };
+		569B93591D2EF1B2005C52E1 /* StyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B93581D2EF1B2005C52E1 /* StyleButton.swift */; };
+		569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B935A1D2EF85D005C52E1 /* ImageExtension.swift */; };
+		56A937601D2763D100269A5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9375F1D2763D100269A5B /* HomeViewController.swift */; };
+		56A937641D27657300269A5B /* TabBarControllerSwipeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */; };
 		56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */; };
 		56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */; };
 		56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */; };
@@ -47,9 +51,13 @@
 		3CA70290FB29AA2A931DFEA2 /* Pods-ORHS InteractTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORHS InteractTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORHS InteractTests/Pods-ORHS InteractTests.release.xcconfig"; sourceTree = "<group>"; };
 		3DDBEA212D72820921143AD3 /* Pods_ORHS_InteractUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORHS_InteractUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		5697303A1D1357CF00B9592C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5697303E1D135F0100B9592C /* ORHS Interact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORHS Interact-Bridging-Header.h"; sourceTree = "<group>"; };
-		56B640171D1B49D400F63FE5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		569B93581D2EF1B2005C52E1 /* StyleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleButton.swift; sourceTree = "<group>"; };
+		569B935A1D2EF85D005C52E1 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = ../ImageExtension.swift; sourceTree = "<group>"; };
+		56A9375F1D2763D100269A5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerSwipeExtension.swift; sourceTree = "<group>"; };
 		56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORHS Interact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 1; };
 		56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 1; };
@@ -149,10 +157,14 @@
 		56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */ = {
 			isa = PBXGroup;
 			children = (
+				569B93581D2EF1B2005C52E1 /* StyleButton.swift */,
+				56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */,
 				56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */,
 				56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */,
 				56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */,
-				56B640171D1B49D400F63FE5 /* MainViewController.swift */,
+				56A9375F1D2763D100269A5B /* HomeViewController.swift */,
+				568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */,
+				569B935A1D2EF85D005C52E1 /* ImageExtension.swift */,
 				56FF34DF1CFE7A5A00B6CE0E /* Assets.xcassets */,
 				56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */,
 				56FF34E41CFE7A5A00B6CE0E /* Info.plist */,
@@ -445,9 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B640181D1B49D400F63FE5 /* MainViewController.swift in Sources */,
+				56A937641D27657300269A5B /* TabBarControllerSwipeExtension.swift in Sources */,
+				569B93591D2EF1B2005C52E1 /* StyleButton.swift in Sources */,
 				56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */,
+				569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */,
 				56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */,
+				56A937601D2763D100269A5B /* HomeViewController.swift in Sources */,
+				568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
