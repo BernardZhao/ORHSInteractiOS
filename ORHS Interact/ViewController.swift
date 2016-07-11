@@ -13,7 +13,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var signInButton: GIDSignInButton!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var interactbackground: UIImageView!
-    @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var signOutButton: StyleButton!
+    @IBOutlet weak var disconnectButton: StyleButton!
 
 	
 	func refreshInterface() {
@@ -22,10 +23,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 			debugPrint("A user is active")
 			if GIDSignIn.sharedInstance().currentUser.profile.email.rangeOfString("eduhsd.k12.ca.us") != nil {
 			debugPrint("refresh - this shit is an ORHS Account")
+			[self.performSegueWithIdentifier("LoginSegue", sender: self)];
 			signInButton.hidden = true
             signOutButton.hidden = false
+            disconnectButton.hidden = false
             statusLabel.text = "Welcome, \(currentUser.profile.name)!"
-            [self.performSegueWithIdentifier("LoginSegue", sender: self)];
+				
 			}
 			else {
 				debugPrint("not ORHS no refresh")
@@ -33,11 +36,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 				statusLabel.text = "Only ORHS Google accounts can login."
 				signInButton.hidden = false
 				signOutButton.hidden = true
+                disconnectButton.hidden = true
 			}
         } else {
 			debugPrint("no refresh cause no nigga here")
             signInButton.hidden = false
             signOutButton.hidden = true
+            disconnectButton.hidden = true
             statusLabel.text = "Sign in using your ORHS Google account."
 		}
 
@@ -49,6 +54,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 		debugPrint("Nigga signed out")
         refreshInterface()
 	}
+    @IBAction func disconnectWasPressed(sender: AnyObject) {
+        GIDSignIn.sharedInstance().disconnect()
+    }
 
 	
 	override func viewDidLoad() {
@@ -95,6 +103,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 			let HomeViewController = (segue.destinationViewController as HomeViewControllerClass)
 
 		}*/
-	}
+	
 
-
+}

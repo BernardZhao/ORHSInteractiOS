@@ -33,5 +33,18 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func joinPressed(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://docs.google.com/forms/d/1-ctFeAA4864rmHKsSczlP04mas-20f5n5aDrcX5btbc/viewform")!)
+    }
     
+    @IBAction func websitePressed(sender: AnyObject) {
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://orhsinteract.wix.com/1516")!)
+    }
+
+    @IBAction func resourcesPressed(sender: AnyObject) {
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://drive.google.com/folderview?id=0BwJLvdTM6Ac4UWlqSHlKTGhxRFk&usp=sharing")!)
+    }
+    @IBAction func githubPressed(sender: AnyObject) {
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/ORHS-Web-App-Dev")!)
+    }
 }

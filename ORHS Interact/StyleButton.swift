@@ -6,21 +6,18 @@
 //
 //
 
-import Foundation
 import UIKit
 @IBDesignable class StyleButton: UIButton {
-    var myValue: Int
     
     required init?(coder aDecoder: NSCoder) {
-        // set myValue before super.init is called
-        self.myValue = 0
+
         
         super.init(coder: aDecoder)
         layer.borderWidth = 1
         layer.borderColor = tintColor.CGColor
         layer.cornerRadius = 5.0
         clipsToBounds = true
-        contentEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         setTitleColor(tintColor, forState: .Normal)
         setTitleColor(UIColor.whiteColor(), forState: .Highlighted)
         setBackgroundImage(UIImage(color: tintColor), forState: .Highlighted)
@@ -28,4 +25,7 @@ import UIKit
         
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
 }

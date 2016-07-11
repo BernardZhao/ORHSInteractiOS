@@ -28,12 +28,16 @@ class HomeViewController: UIViewController {
         picture.layer.cornerRadius = picture.frame.height/2
         picture.layer.borderWidth = 1
         picture.layer.masksToBounds = false
-        picture.layer.borderColor = UIColor.blackColor().CGColor
+        picture.layer.borderColor = UIColor.darkGrayColor().CGColor
         picture.clipsToBounds = true
         nameLabel.text = GIDSignIn.sharedInstance().currentUser.profile.name
         
         let tabBarController = self.tabBarController
         tabBarController?.setupSwipeGestureRecognizers(true)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HomeViewController.leftButtonFunction))
+        self.navigationController?.navigationBar.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
+        //self.navigationController?.navigationBar.barTintColor = UIColor.darkGrayColor()
+        self.navigationController?.navigationBar.topItem!.title = "Oak Ridge Interact"
         
         
         
@@ -77,6 +81,12 @@ class HomeViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //MainViewController
     }
-
+    
+    func leftButtonFunction(){
+        debugPrint("Gotta go back nigga")
+        self.dismissViewControllerAnimated(true, completion: {});
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    
+    }
     
 }
