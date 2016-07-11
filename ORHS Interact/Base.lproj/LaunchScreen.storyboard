@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-F8-f5w">
-                                <rect key="frame" x="-75" y="-367" width="750" height="1334"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-F8-f5w">
+                                <rect key="frame" x="120" y="-20" width="360" height="640"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sOT-F8-f5w" secondAttribute="height" multiplier="375:667" id="pMy-Ae-Gpb"/>
                                 </constraints>

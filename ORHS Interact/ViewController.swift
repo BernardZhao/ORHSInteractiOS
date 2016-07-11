@@ -22,7 +22,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 		if let currentUser = GIDSignIn.sharedInstance().currentUser {
 			debugPrint("A user is active")
 			if GIDSignIn.sharedInstance().currentUser.profile.email.rangeOfString("eduhsd.k12.ca.us") != nil {
-			debugPrint("refresh - this shit is an ORHS Account")
+			debugPrint("refresh - this is an ORHS Account")
 			[self.performSegueWithIdentifier("LoginSegue", sender: self)];
 			signInButton.hidden = true
             signOutButton.hidden = false
@@ -39,7 +39,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                 disconnectButton.hidden = true
 			}
         } else {
-			debugPrint("no refresh cause no nigga here")
+			debugPrint("no refresh because noone is here")
             signInButton.hidden = false
             signOutButton.hidden = true
             disconnectButton.hidden = true
@@ -51,7 +51,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 	
     @IBAction func signOutWasPressed(sender: AnyObject) {
 		GIDSignIn.sharedInstance().signOut()
-		debugPrint("Nigga signed out")
+		debugPrint("User signed out")
         refreshInterface()
 	}
     @IBAction func disconnectWasPressed(sender: AnyObject) {

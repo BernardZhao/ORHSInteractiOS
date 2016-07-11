@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     var flipperImages: [UIImage] = []
     var myTimer: NSTimer?
     var counter: Int = 1
+    let url: NSURL = NSURL(string: "https://spreadsheets.google.com/tq?key=1OYHhpeWnWCF_35foMF-R8oPha012UGDSBo1Q1aVUVJM")!
+    let sheets = SpreadsheetIntegration()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +36,18 @@ class HomeViewController: UIViewController {
         
         let tabBarController = self.tabBarController
         tabBarController?.setupSwipeGestureRecognizers(true)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HomeViewController.leftButtonFunction))
-        self.navigationController?.navigationBar.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
+        
+        sheets.downloadURL(url)
+                
+        /*
+         
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HomeViewController.leftButtonFunction))
+        self.navigationController!.navigationBar.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
         //self.navigationController?.navigationBar.barTintColor = UIColor.darkGrayColor()
         self.navigationController?.navigationBar.topItem!.title = "Oak Ridge Interact"
-        
-        
-        
+ 
+        */
+ 
         // Set vertical effect
         
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
@@ -82,11 +89,11 @@ class HomeViewController: UIViewController {
         //MainViewController
     }
     
-    func leftButtonFunction(){
+    /*func leftButtonFunction(){
         debugPrint("Gotta go back nigga")
         self.dismissViewControllerAnimated(true, completion: {});
         self.navigationController?.popToRootViewControllerAnimated(true)
     
-    }
+    }*/
     
 }

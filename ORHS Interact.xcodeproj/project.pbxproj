@@ -10,6 +10,7 @@
 		0E54E4817E9BC3B5D8C5D666 /* Pods_ORHS_Interact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22B89D04ECB3DA7CC430964 /* Pods_ORHS_Interact.framework */; };
 		56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */; };
 		5663652C1D331F8200788F86 /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663652B1D331F8200788F86 /* CustomNavigation.swift */; };
+		568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */; };
 		568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */; };
 		5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
 		5697303C1D1357F100B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
@@ -53,6 +54,7 @@
 		3DDBEA212D72820921143AD3 /* Pods_ORHS_InteractUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORHS_InteractUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		5663652B1D331F8200788F86 /* CustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetIntegration.swift; sourceTree = "<group>"; };
 		568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		5697303A1D1357CF00B9592C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5697303E1D135F0100B9592C /* ORHS Interact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORHS Interact-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				56FF34DF1CFE7A5A00B6CE0E /* Assets.xcassets */,
 				56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */,
 				56FF34E41CFE7A5A00B6CE0E /* Info.plist */,
+				568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */,
 			);
 			path = "ORHS Interact";
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				569B93591D2EF1B2005C52E1 /* StyleButton.swift in Sources */,
 				56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */,
 				569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */,
+				568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */,
 				5663652C1D331F8200788F86 /* CustomNavigation.swift in Sources */,
 				56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */,
 				56A937601D2763D100269A5B /* HomeViewController.swift in Sources */,
