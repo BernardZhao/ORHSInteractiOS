@@ -12,7 +12,6 @@
 		5663652C1D331F8200788F86 /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663652B1D331F8200788F86 /* CustomNavigation.swift */; };
 		5665133C1D358763001FD463 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665133B1D358763001FD463 /* Event.swift */; };
 		5665133E1D358886001FD463 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665133D1D358886001FD463 /* EventListCell.swift */; };
-		566513401D35C936001FD463 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5665133F1D35C936001FD463 /* json.txt */; };
 		5665278D1D3ABF1D0060198A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */; };
 		568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */; };
 		568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */; };
@@ -60,7 +59,6 @@
 		5663652B1D331F8200788F86 /* CustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
 		5665133B1D358763001FD463 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5665133D1D358886001FD463 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
-		5665133F1D35C936001FD463 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.txt; path = ../json.txt; sourceTree = "<group>"; };
 		5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetIntegration.swift; sourceTree = "<group>"; };
 		568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 		56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */ = {
 			isa = PBXGroup;
 			children = (
-				5665133F1D35C936001FD463 /* json.txt */,
 				569B93581D2EF1B2005C52E1 /* StyleButton.swift */,
 				56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */,
 				56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */,
@@ -325,7 +322,6 @@
 				56FF34E01CFE7A5A00B6CE0E /* Assets.xcassets in Resources */,
 				5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */,
 				56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */,
-				566513401D35C936001FD463 /* json.txt in Resources */,
 				56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
