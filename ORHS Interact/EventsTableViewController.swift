@@ -10,6 +10,7 @@ import Foundation
 import SafariServices
 import MapKit
 import UIKit
+import EventKit
 
 class EventsTableViewController: UITableViewController
 {
@@ -20,6 +21,7 @@ class EventsTableViewController: UITableViewController
     let geoCoder = CLGeocoder()
     let tapRec = UITapGestureRecognizer()
     var coords: CLLocationCoordinate2D? = nil
+    var savedEventId : String = " "
     
     override func viewDidLoad()
     {
@@ -28,11 +30,10 @@ class EventsTableViewController: UITableViewController
         self.generateEvents(eventsURL)
         self.tableView.reloadData()
 
-        tableView.rowHeight = 123
+        tableView.rowHeight = 125
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .SingleLine
-        
         
         
         
@@ -60,10 +61,14 @@ class EventsTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as! EventListCell
         cell.locationImage?.userInteractionEnabled = true
         cell.locationImage?.tag = indexPath.row
-        let tapped: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.imageTapped))
-        tapped.numberOfTapsRequired = 1
-        cell.locationImage?.addGestureRecognizer(tapped)
-        
+        let tappedImage: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.imageTapped))
+        tappedImage.numberOfTapsRequired = 1
+        cell.locationImage?.addGestureRecognizer(tappedImage)
+        cell.eventDate?.userInteractionEnabled = true
+        cell.eventDate?.tag = indexPath.row
+        let tappedDate: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.dateTapped))
+        tappedDate.numberOfTapsRequired = 1
+        cell.eventDate?.addGestureRecognizer(tappedDate)
         
         
         let event = self.events[indexPath.row]
@@ -71,6 +76,10 @@ class EventsTableViewController: UITableViewController
         cell.event = event
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        self.animate(cell)
     }
     
     // MARK: - UITableViewDelegate
@@ -90,7 +99,8 @@ class EventsTableViewController: UITableViewController
     // MARK: - Target / Action
     func imageTapped(sender: UITapGestureRecognizer){
         print("Image has been tapped")
-    
+        
+        
         let tapLocation = sender.locationInView(self.tableView)
         let indexPath = self.tableView.indexPathForRowAtPoint(tapLocation)
         let address = self.events[indexPath!.row].location
@@ -120,6 +130,56 @@ class EventsTableViewController: UITableViewController
         
     }
     
+    func createEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate) {
+        let event = EKEvent(eventStore: eventStore)
+        
+        event.title = title
+        event.startDate = startDate
+        event.endDate = endDate
+        event.calendar = eventStore.defaultCalendarForNewEvents
+        do {
+            try eventStore.saveEvent(event, span: .ThisEvent)
+            savedEventId = event.eventIdentifier
+        } catch {
+            print("Bad things happened")
+        }
+    }
+    func dateTapped(sender: UITapGestureRecognizer){
+        print("Date has been tapped")
+        let eventStore = EKEventStore()
+        let tapLocation = sender.locationInView(self.tableView)
+        let indexPath = self.tableView.indexPathForRowAtPoint(tapLocation)
+        let date = self.events[indexPath!.row].date
+        print (date)
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM d, y, h a"
+        
+        
+        let startDate = dateFormatter.dateFromString(date!)
+        print(startDate)
+        let endDate = startDate!.dateByAddingTimeInterval(60 * 60) // One hour
+        
+        if (EKEventStore.authorizationStatusForEntityType(.Event) != EKAuthorizationStatus.Authorized) {
+            eventStore.requestAccessToEntityType(.Event, completion: {granted, error in
+                self.createEvent(eventStore, title: self.events[indexPath!.row].name!, startDate: startDate!, endDate: endDate)
+                
+            })
+        } else {
+            self.createEvent(eventStore, title: self.events[indexPath!.row].name!, startDate: startDate!, endDate: endDate)        }
+        
+        
+    }
+
+    
+    func animate(cell:UITableViewCell) {
+        let view = cell.contentView
+        view.layer.opacity = 0.1
+        UIView.animateWithDuration(0.5,delay:  0, options: [.AllowUserInteraction, . CurveEaseInOut], animations: { () -> Void in
+            view.layer.opacity = 1
+        }, completion:nil)
+    }
+    
     func generateEvents(url: NSURL)
     {
         let sheets = SpreadsheetIntegration()
@@ -135,6 +195,7 @@ class EventsTableViewController: UITableViewController
                     for y in 0...4{
                         let test: String = eventDictionaries[y]["content"]!["$t"] as! String
                         let myStringArray = test.componentsSeparatedByString(", _")
+                        // this if statement cuts off the extra space left in the first string that was separated.
                         if (x == 0){
                         newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(8)))                        }
                         else {
