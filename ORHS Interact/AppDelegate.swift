@@ -23,10 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().delegate = self
 
-
-		
 		UITabBar.appearance().tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
-        return true
+		
+		return true
     }
 	
 	func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {

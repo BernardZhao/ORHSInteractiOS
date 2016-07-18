@@ -10,6 +10,10 @@
 		0E54E4817E9BC3B5D8C5D666 /* Pods_ORHS_Interact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22B89D04ECB3DA7CC430964 /* Pods_ORHS_Interact.framework */; };
 		56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */; };
 		5663652C1D331F8200788F86 /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663652B1D331F8200788F86 /* CustomNavigation.swift */; };
+		5665133C1D358763001FD463 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665133B1D358763001FD463 /* Event.swift */; };
+		5665133E1D358886001FD463 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665133D1D358886001FD463 /* EventListCell.swift */; };
+		566513401D35C936001FD463 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5665133F1D35C936001FD463 /* json.txt */; };
+		5665278D1D3ABF1D0060198A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */; };
 		568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */; };
 		568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */; };
 		5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
@@ -54,6 +58,10 @@
 		3DDBEA212D72820921143AD3 /* Pods_ORHS_InteractUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORHS_InteractUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		5663652B1D331F8200788F86 /* CustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		5665133B1D358763001FD463 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		5665133D1D358886001FD463 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		5665133F1D35C936001FD463 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.txt; path = ../json.txt; sourceTree = "<group>"; };
+		5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetIntegration.swift; sourceTree = "<group>"; };
 		568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		5697303A1D1357CF00B9592C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 		56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */ = {
 			isa = PBXGroup;
 			children = (
+				5665133F1D35C936001FD463 /* json.txt */,
 				569B93581D2EF1B2005C52E1 /* StyleButton.swift */,
 				56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */,
 				56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */,
@@ -174,6 +183,9 @@
 				56FF34E11CFE7A5A00B6CE0E /* LaunchScreen.storyboard */,
 				56FF34E41CFE7A5A00B6CE0E /* Info.plist */,
 				568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */,
+				5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */,
+				5665133B1D358763001FD463 /* Event.swift */,
+				5665133D1D358886001FD463 /* EventListCell.swift */,
 			);
 			path = "ORHS Interact";
 			sourceTree = "<group>";
@@ -313,6 +325,7 @@
 				56FF34E01CFE7A5A00B6CE0E /* Assets.xcassets in Resources */,
 				5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */,
 				56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */,
+				566513401D35C936001FD463 /* json.txt in Resources */,
 				56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,13 +478,16 @@
 			files = (
 				56A937641D27657300269A5B /* TabBarControllerSwipeExtension.swift in Sources */,
 				569B93591D2EF1B2005C52E1 /* StyleButton.swift in Sources */,
+				5665278D1D3ABF1D0060198A /* EventsTableViewController.swift in Sources */,
 				56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */,
 				569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */,
+				5665133C1D358763001FD463 /* Event.swift in Sources */,
 				568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */,
 				5663652C1D331F8200788F86 /* CustomNavigation.swift in Sources */,
 				56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */,
 				56A937601D2763D100269A5B /* HomeViewController.swift in Sources */,
 				568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */,
+				5665133E1D358886001FD463 /* EventListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

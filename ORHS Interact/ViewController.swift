@@ -15,7 +15,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var interactbackground: UIImageView!
     @IBOutlet weak var signOutButton: StyleButton!
     @IBOutlet weak var disconnectButton: StyleButton!
-
+    @IBOutlet weak var returnButton: UIButton!
+    
 	
 	func refreshInterface() {
 			debugPrint("refreshInterface")
@@ -23,10 +24,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 			debugPrint("A user is active")
 			if GIDSignIn.sharedInstance().currentUser.profile.email.rangeOfString("eduhsd.k12.ca.us") != nil {
 			debugPrint("refresh - this is an ORHS Account")
-			[self.performSegueWithIdentifier("LoginSegue", sender: self)];
+			self.performSegueWithIdentifier("LoginSegue", sender: self)
 			signInButton.hidden = true
             signOutButton.hidden = false
             disconnectButton.hidden = false
+			returnButton.hidden = false
             statusLabel.text = "Welcome, \(currentUser.profile.name)!"
 				
 			}
@@ -37,12 +39,14 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 				signInButton.hidden = false
 				signOutButton.hidden = true
                 disconnectButton.hidden = true
+				returnButton.hidden = true
 			}
         } else {
 			debugPrint("no refresh because noone is here")
             signInButton.hidden = false
             signOutButton.hidden = true
             disconnectButton.hidden = true
+			returnButton.hidden = true
             statusLabel.text = "Sign in using your ORHS Google account."
 		}
 
@@ -56,6 +60,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 	}
     @IBAction func disconnectWasPressed(sender: AnyObject) {
         GIDSignIn.sharedInstance().disconnect()
+    }
+    @IBAction func returnWasPressed(sender: AnyObject) {
+		self.performSegueWithIdentifier("LoginSegue", sender: self)
     }
 
 	

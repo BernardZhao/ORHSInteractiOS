@@ -13,12 +13,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var flipper: UIImageView!
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var hoursButton: UIButton!
+    @IBOutlet weak var hoursDescription: UILabel!
+
+
     
     var flipperImages: [UIImage] = []
     var myTimer: NSTimer?
     var counter: Int = 1
-    let url: NSURL = NSURL(string: "https://spreadsheets.google.com/tq?key=1OYHhpeWnWCF_35foMF-R8oPha012UGDSBo1Q1aVUVJM")!
-    let sheets = SpreadsheetIntegration()
+
+    let hoursURL: NSURL = NSURL(string: "https://spreadsheets.google.com/feeds/list/13CkOpYGJA3V6fOwlli6XAu133F7TptnIW-eZjFhDZjc/od6/public/values?alt=json")!
+    var sheets: SpreadsheetIntegration?
+    var recordedHours: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +32,7 @@ class HomeViewController: UIViewController {
         
         myTimer = NSTimer.scheduledTimerWithTimeInterval(15, target: self, selector: #selector(HomeViewController.imageFlipper), userInfo: nil, repeats: true)
         flipperImages = [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!,]
+        flipper.alpha = 0.8
         picture.image = UIImage(data: NSData(contentsOfURL: GIDSignIn.sharedInstance().currentUser.profile.imageURLWithDimension(150))!)
         picture.layer.cornerRadius = picture.frame.height/2
         picture.layer.borderWidth = 1
@@ -33,20 +40,12 @@ class HomeViewController: UIViewController {
         picture.layer.borderColor = UIColor.darkGrayColor().CGColor
         picture.clipsToBounds = true
         nameLabel.text = GIDSignIn.sharedInstance().currentUser.profile.name
+        hoursDescription.hidden = true
         
         let tabBarController = self.tabBarController
         tabBarController?.setupSwipeGestureRecognizers(true)
+        self.findHours(hoursURL, name: GIDSignIn.sharedInstance().currentUser.profile.name)
         
-        sheets.downloadURL(url)
-                
-        /*
-         
-         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HomeViewController.leftButtonFunction))
-        self.navigationController!.navigationBar.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
-        //self.navigationController?.navigationBar.barTintColor = UIColor.darkGrayColor()
-        self.navigationController?.navigationBar.topItem!.title = "Oak Ridge Interact"
- 
-        */
  
         // Set vertical effect
         
@@ -84,10 +83,38 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
+    @IBAction func hoursWasPressed(sender: AnyObject) {
+        self.hoursDescription.hidden = false
+        if let measure = recordedHours {
+            if (measure < 25){
+                UIView.transitionWithView(self.hoursDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursDescription.text = "You have \(25-measure) hours left to complete."}, completion: nil)
+            } else if (measure<30){
+                UIView.transitionWithView(self.hoursDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursDescription.text = "Congrats! You've completed your hours for this year."}, completion: nil)
+            }
+            else if (measure<40) {
+                UIView.transitionWithView(self.hoursDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursDescription.text = "You're going above and beyond."}, completion: nil)
+            } else if (measure<50){
+                UIView.transitionWithView(self.hoursDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursDescription.text = "You are a volunteering beast."}, completion: nil)
+            }else if (measure == 69) {
+                UIView.transitionWithView(self.hoursDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursDescription.text = "\u{1F440}"}, completion: nil)
+            } else {
+                UIView.transitionWithView(self.hoursDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursDescription.text = "\u{1F4AF}You keep service \u{1F44D}above\u{1F44D} yourself.\u{1F44C} \u{1F525} Bless up \u{1F64F} Major Bag Alert \u{1F4B0} \u{1F4AF}"}, completion: nil)            }
+            
+        }
+    }
     
+    func reloadData() {
+        //self.upcomingEvent.text = sheets!.events[0].name
+    }
+    
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //MainViewController
     }
+ 
+    */
     
     /*func leftButtonFunction(){
         debugPrint("Gotta go back nigga")
@@ -95,5 +122,53 @@ class HomeViewController: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     
     }*/
+    
+    func findHours(url: NSURL, name: String) {
+        var hours: String = ""
+
+        let sheets = SpreadsheetIntegration()
+        
+        sheets.downloadJSON(url) {
+            (data: NSData) in
+            
+            if let jsonDictionary = SpreadsheetIntegration.parseJSONFromData(data){
+                
+                let eventDictionaries = jsonDictionary["feed"]!["entry"] as! [[String: AnyObject]]
+                
+                for x in 0...eventDictionaries.count - 1{
+                    let sheetName: String = eventDictionaries[x]["title"]!["$t"] as! String
+                    //debugPrint (sheetName)
+                    if (sheetName == name){
+                        let test: String = eventDictionaries[x]["content"]!["$t"] as! String
+                        let splitString = test.componentsSeparatedByString("totals: ")
+                        hours = splitString[1]
+                        debugPrint (hours)
+                        dispatch_async(dispatch_get_main_queue()) {
+                            UIView.transitionWithView(self.hoursButton, duration: 0.25, options: [.TransitionCrossDissolve], animations: {self.hoursButton.setTitle(hours, forState: .Normal)}, completion: nil)
+                            self.recordedHours = Int(hours)
+                        }
+
+                    }
+                    
+                }
+                
+                if (hours == ""){
+                debugPrint("wtf")
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.hoursButton.titleLabel!.font = UIFont(name: "System", size: 30)
+                    UIView.transitionWithView(self.hoursButton, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursButton.setTitle("It appears no recorded hours could be found", forState: .Normal)}, completion: nil)
+                    
+                }
+                }
+ 
+                
+                
+            }
+            
+            
+        }
+        
+    }
+    
     
 }
