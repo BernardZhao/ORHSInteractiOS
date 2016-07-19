@@ -52,4 +52,5 @@ class EventListCell: UITableViewCell
     @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
     @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var locationBackground: UIImageView!
 }

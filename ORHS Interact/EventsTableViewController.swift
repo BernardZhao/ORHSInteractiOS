@@ -59,11 +59,11 @@ class EventsTableViewController: UITableViewController
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as! EventListCell
-        cell.locationImage?.userInteractionEnabled = true
-        cell.locationImage?.tag = indexPath.row
+        cell.locationBackground?.userInteractionEnabled = true
+        cell.locationBackground?.tag = indexPath.row
         let tappedImage: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.imageTapped))
         tappedImage.numberOfTapsRequired = 1
-        cell.locationImage?.addGestureRecognizer(tappedImage)
+        cell.locationBackground?.addGestureRecognizer(tappedImage)
         cell.eventDate?.userInteractionEnabled = true
         cell.eventDate?.tag = indexPath.row
         let tappedDate: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.dateTapped))
@@ -137,12 +137,31 @@ class EventsTableViewController: UITableViewController
         event.startDate = startDate
         event.endDate = endDate
         event.calendar = eventStore.defaultCalendarForNewEvents
-        do {
-            try eventStore.saveEvent(event, span: .ThisEvent)
-            savedEventId = event.eventIdentifier
-        } catch {
-            print("Bad things happened")
+        
+        
+        let alertController = UIAlertController(title: title, message: "Do you want to add this event to your calendar?", preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
         }
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            print("eventAdded")
+            do {
+                try eventStore.saveEvent(event, span: .ThisEvent)
+                self.savedEventId = event.eventIdentifier
+            } catch {
+                print("Event failed to add")
+            }
+        }
+        alertController.addAction(OKAction)
+        
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
+        
+
     }
     func dateTapped(sender: UITapGestureRecognizer){
         print("Date has been tapped")
@@ -166,7 +185,8 @@ class EventsTableViewController: UITableViewController
                 
             })
         } else {
-            self.createEvent(eventStore, title: self.events[indexPath!.row].name!, startDate: startDate!, endDate: endDate)        }
+            self.createEvent(eventStore, title: self.events[indexPath!.row].name!, startDate: startDate!, endDate: endDate)
+        }
         
         
     }
