@@ -19,14 +19,12 @@ class EventListCell: UITableViewCell
     func updateUI()
     {
         print("UI is getting updated")
-        UIView.transitionWithView(self.eventName, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.eventName.text = self.event.name}, completion: nil)
-        UIView.transitionWithView(self.eventDescription, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.eventDescription.text = self.event.info}, completion: nil)
-        UIView.transitionWithView(self.eventLocation, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.eventLocation.text = self.event.location}, completion: nil)
-        UIView.transitionWithView(self.eventDate, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.eventDate.text = self.event.date}, completion: nil)
-        //eventName.text = event.name
-        //eventDescription.text = event.info
-        //eventLocation.text = event.location
-        //eventDate.text = event.date
+        eventName.text = event.name
+        eventDescription.text = event.info
+        eventLocation.text = event.location
+        eventDate.text = event.date
+
+
         //createdAtLabel.text = "Duc Tran | \(episode.createdAt!)"
         
         //let thumbnailURL = episode.thumbnailURL

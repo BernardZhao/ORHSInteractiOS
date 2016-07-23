@@ -35,12 +35,24 @@ class CustomNavigation: UINavigationController {
         spacer.width = -15
         
 
-
+        let spacer2 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
+        spacer.width = -16
         
+        let moreOptionsButton = UIButton(frame: CGRectMake(0,0,5,20))
+        let moreOptionsImage = UIImage(named: "threedots-2")
+        let tintedMoreOptionsButton = moreOptionsImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        moreOptionsButton.setImage(tintedMoreOptionsButton, forState: .Normal)
+        moreOptionsButton.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
+        moreOptionsButton.addTarget(self, action: #selector(CustomNavigation.rightButtonFuction), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        let moreOptionsBarButton = UIBarButtonItem(customView: moreOptionsButton)
  
         let navItem:UINavigationItem = UINavigationItem()
         navItem.leftBarButtonItems = [spacer,backBarButton]
-        
+        navItem.rightBarButtonItems = [spacer2, moreOptionsBarButton]
+        //navItem.rightBarButtonItem = moreOptionsBarButton
+        //navItem.leftBarButtonItem = backBarButton
         navigationBar.pushNavigationItem(navItem, animated: false)
         
         self.navigationBar.topItem!.title = "Oak Ridge Interact"
@@ -56,4 +68,10 @@ class CustomNavigation: UINavigationController {
         self.navigationController?.popToRootViewControllerAnimated(true)
         
     }
+    
+    func rightButtonFuction(){
+        debugPrint("Right button pressed - Transitioning views to More Options")
+        performSegueWithIdentifier("MoreOptionsSegue", sender: self)
+    }
+    
 }

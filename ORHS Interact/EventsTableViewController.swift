@@ -66,9 +66,11 @@ class EventsTableViewController: UITableViewController
         cell.locationBackground?.addGestureRecognizer(tappedImage)
         cell.eventDate?.userInteractionEnabled = true
         cell.eventDate?.tag = indexPath.row
+        
         let tappedDate: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.dateTapped))
         tappedDate.numberOfTapsRequired = 1
         cell.eventDate?.addGestureRecognizer(tappedDate)
+        
         
         
         let event = self.events[indexPath.row]

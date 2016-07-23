@@ -482,9 +482,9 @@
                                                 <constraint firstAttribute="height" constant="23" id="lbd-fF-Rdq"/>
                                                 <constraint firstAttribute="width" constant="130" id="qbr-CO-cnD"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuL-e3-kPg">
                                             <rect key="frame" x="8" y="56" width="398" height="60"/>
@@ -578,6 +578,36 @@
             </objects>
             <point key="canvasLocation" x="3177" y="312"/>
         </scene>
+        <!--More Options View Controller-->
+        <scene sceneID="fEP-zp-YS2">
+            <objects>
+                <viewController storyboardIdentifier="More Options" id="pPo-9B-grN" customClass="MoreOptionsViewController" customModule="ORHS_Interact" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iiw-gV-fkf"/>
+                        <viewControllerLayoutGuide type="bottom" id="d9h-nT-Dcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fYz-Oc-AfH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHS-Wb-Ko1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tHS-Wb-Ko1" firstAttribute="bottom" secondItem="d9h-nT-Dcx" secondAttribute="top" id="5S0-4f-hgl"/>
+                            <constraint firstItem="tHS-Wb-Ko1" firstAttribute="leading" secondItem="fYz-Oc-AfH" secondAttribute="leading" id="D77-EB-ZTt"/>
+                            <constraint firstAttribute="trailing" secondItem="tHS-Wb-Ko1" secondAttribute="trailing" id="Mb4-Gh-UQ7"/>
+                            <constraint firstItem="tHS-Wb-Ko1" firstAttribute="top" secondItem="iiw-gV-fkf" secondAttribute="bottom" id="zgK-JL-p97"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzI-8p-A0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4085" y="-32"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="fsU-fE-8KK">
             <objects>
@@ -651,7 +681,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdJ-rh-DpP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdJ-rh-DpP">
                                 <rect key="frame" x="175" y="431" width="250" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="CCl-CW-9hT"/>
@@ -725,10 +755,9 @@
         <scene sceneID="OGm-CY-Mt2">
             <objects>
                 <tabBarController storyboardIdentifier="Main" id="pDK-dR-mZV" sceneMemberID="viewController">
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" id="Mp7-lA-Zuv">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" barStyle="black" id="Mp7-lA-Zuv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="WbZ-xF-yjQ" kind="relationship" relationship="viewControllers" id="gsr-p7-sjz"/>
@@ -753,6 +782,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="HaV-p5-F6I" kind="relationship" relationship="rootViewController" id="jMT-ff-0cc"/>
+                        <segue destination="pPo-9B-grN" kind="show" identifier="MoreOptionsSegue" id="rBB-Yv-CdF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4o-WC-dP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -772,6 +802,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="fAt-eY-OOM" kind="relationship" relationship="rootViewController" id="wOm-r5-S03"/>
+                        <segue destination="pPo-9B-grN" kind="show" identifier="MoreOptionsSegue" id="7TO-hY-uRv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9F-M5-Gsl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -791,6 +822,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="vBi-Bi-U1y" kind="relationship" relationship="rootViewController" id="cVf-d4-eRX"/>
+                        <segue destination="pPo-9B-grN" kind="show" identifier="MoreOptionsSegue" id="qYL-ok-e8Q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bt-zS-31a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -813,4 +845,7 @@
         <image name="mapbackground" width="317" height="127"/>
         <image name="mappintest" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qYL-ok-e8Q"/>
+    </inferredMetricsTieBreakers>
 </document>

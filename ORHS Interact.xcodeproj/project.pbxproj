@@ -22,6 +22,7 @@
 		569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B935A1D2EF85D005C52E1 /* ImageExtension.swift */; };
 		56A937601D2763D100269A5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9375F1D2763D100269A5B /* HomeViewController.swift */; };
 		56A937641D27657300269A5B /* TabBarControllerSwipeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */; };
+		56EBC0001D42C64F0063C91E /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EBBFFF1D42C64F0063C91E /* MoreOptionsViewController.swift */; };
 		56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */; };
 		56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */; };
 		56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		569B935A1D2EF85D005C52E1 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = ../ImageExtension.swift; sourceTree = "<group>"; };
 		56A9375F1D2763D100269A5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerSwipeExtension.swift; sourceTree = "<group>"; };
+		56EBBFFF1D42C64F0063C91E /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
 		56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORHS Interact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 1; };
 		56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 1; };
@@ -170,6 +172,7 @@
 				569B93581D2EF1B2005C52E1 /* StyleButton.swift */,
 				56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */,
 				56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */,
+				56EBBFFF1D42C64F0063C91E /* MoreOptionsViewController.swift */,
 				56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */,
 				56FF34DC1CFE7A5A00B6CE0E /* Main.storyboard */,
 				56A9375F1D2763D100269A5B /* HomeViewController.swift */,
@@ -476,6 +479,7 @@
 				569B93591D2EF1B2005C52E1 /* StyleButton.swift in Sources */,
 				5665278D1D3ABF1D0060198A /* EventsTableViewController.swift in Sources */,
 				56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */,
+				56EBC0001D42C64F0063C91E /* MoreOptionsViewController.swift in Sources */,
 				569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */,
 				5665133C1D358763001FD463 /* Event.swift in Sources */,
 				568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */,
