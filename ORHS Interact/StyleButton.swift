@@ -31,10 +31,10 @@ class StyleButton: UIButton {
         layer.borderColor = tintColor.CGColor
         layer.cornerRadius = 5.0
         clipsToBounds = true
-        //titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         setTitleColor(tintColor, forState: .Normal)
         setTitleColor(UIColor.whiteColor(), forState: .Highlighted)
         setBackgroundImage(UIImage(color: tintColor), forState: .Highlighted)
-        // set other operations after super.init, if required    }
-}
+        setTitleColor(UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0), forState: .Highlighted)
+        // set other operations after super.init, if required
+    }
 }

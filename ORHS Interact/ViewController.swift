@@ -105,11 +105,5 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         // Dispose of any resources that can be recreated.
     }
 	
-/*	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if (segue.identifier == "loginSegue") {
-			let HomeViewController = (segue.destinationViewController as HomeViewControllerClass)
-
-		}*/
-	
 
 }

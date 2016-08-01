@@ -36,7 +36,6 @@ class EventsTableViewController: UITableViewController
         tableView.separatorStyle = .SingleLine
         
         
-        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -174,7 +173,7 @@ class EventsTableViewController: UITableViewController
         print (date)
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMMM d, y, h a"
+        dateFormatter.dateFormat = "ha MMMM d, y"
         
         
         let startDate = dateFormatter.dateFromString(date!)

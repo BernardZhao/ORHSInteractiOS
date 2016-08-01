@@ -51,8 +51,6 @@ class CustomNavigation: UINavigationController {
         let navItem:UINavigationItem = UINavigationItem()
         navItem.leftBarButtonItems = [spacer,backBarButton]
         navItem.rightBarButtonItems = [spacer2, moreOptionsBarButton]
-        //navItem.rightBarButtonItem = moreOptionsBarButton
-        //navItem.leftBarButtonItem = backBarButton
         navigationBar.pushNavigationItem(navItem, animated: false)
         
         self.navigationBar.topItem!.title = "Oak Ridge Interact"

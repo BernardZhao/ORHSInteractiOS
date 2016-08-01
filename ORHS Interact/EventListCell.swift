@@ -23,26 +23,6 @@ class EventListCell: UITableViewCell
         eventDescription.text = event.info
         eventLocation.text = event.location
         eventDate.text = event.date
-
-
-        //createdAtLabel.text = "Duc Tran | \(episode.createdAt!)"
-        
-        //let thumbnailURL = episode.thumbnailURL
-        /*
-        let networkService = NetworkService(url: thumbnailURL!)
-        networkService.downloadImage { (imageData) in
-            let image = UIImage(data: imageData)
-            dispatch_async(dispatch_get_main_queue(), {
-                self.thumbnailImageView.image = image
-            })
-        }
- 
-        
-        authorImageView.layer.cornerRadius = authorImageView.bounds.width / 2.0
-        authorImageView.layer.masksToBounds = true
-        authorImageView.layer.borderColor = UIColor.whiteColor().CGColor
-        authorImageView.layer.borderWidth = 1.0
-         */
     }
     
     @IBOutlet weak var eventName: UILabel!

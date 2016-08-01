@@ -34,11 +34,11 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func joinPressed(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://docs.google.com/forms/d/1-ctFeAA4864rmHKsSczlP04mas-20f5n5aDrcX5btbc/viewform")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://goo.gl/forms/k9uHclWR4jazJjYj2")!)
     }
     
     @IBAction func websitePressed(sender: AnyObject) {
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://orhsinteract.wix.com/1516")!)
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://orhsinteract.com")!)
     }
 
     @IBAction func resourcesPressed(sender: AnyObject) {

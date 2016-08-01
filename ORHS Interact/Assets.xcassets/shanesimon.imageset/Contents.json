@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "shanesimon.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "aboutwaad.jpg",
       "scale" : "2x"
     },
     {

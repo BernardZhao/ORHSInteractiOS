@@ -105,23 +105,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func reloadData() {
-        //self.upcomingEvent.text = sheets!.events[0].name
-    }
     
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //MainViewController
-    }
- 
-    */
-    
-    /*func leftButtonFunction(){
-        debugPrint("Gotta go back nigga")
-        self.dismissViewControllerAnimated(true, completion: {});
-        self.navigationController?.popToRootViewControllerAnimated(true)
-    
-    }*/
     
     func findHours(url: NSURL, name: String) {
         var hours: String = ""

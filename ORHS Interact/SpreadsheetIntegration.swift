@@ -29,61 +29,6 @@ class SpreadsheetIntegration{
     }
     
     
-    /*
-    
-    func downloadAndParseEvents()
-    {
-        
-        let request = NSURLRequest(URL: self.eventsURL)
-        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) in
-            
-            if error == nil {
-                if let httpResponse = response as? NSHTTPURLResponse {
-                    switch (httpResponse.statusCode) {
-                    case 200:
-                        if let data = data {
-                            do {
-                                
-                                if let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? [String : AnyObject]
-                                
-                                {
-                                    
-                                    let eventDictionaries = jsonDictionary["feed"]!["entry"] as! [[String: AnyObject]]
-                                    for x in 0...eventDictionaries.count + 1 {
-                                        var newEvent = [String]()
-                                        for y in 0...4{
-                                            let test: String = eventDictionaries[y]["content"]!["$t"] as! String
-                                            let myStringArray = test.componentsSeparatedByString(",")
-                                            newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(8)))
-                                        }
-                                        
-                                        self.events.append(Event(myEvents: newEvent))
-                                        print (self.events[x].description)
-                                    }
-                                    dispatch_async(dispatch_get_main_queue()) {
-                                        //HomeViewController.reloadData()
-                                    }
-                                    
-                                }
-                                
-                            } catch let error as NSError {
-                                print("error processing json data: \(error.localizedDescription)")
-                                
-                            }
-                        }
-                    default:
-                        print(httpResponse.statusCode)
-                    }
-                }
-            } else {
-                print("Error: \(error?.localizedDescription)")
-            }
-        }
-        
-        dataTask.resume()
-    }
- 
- */
     
     typealias DataHandler = (NSData -> Void)
     
