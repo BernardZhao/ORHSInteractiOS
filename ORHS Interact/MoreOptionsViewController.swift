@@ -11,6 +11,7 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
 
     let officeremail = "orinteract@gmail.com"
     let bugemail = "orhswebandappdevelopment@gmail.com"
+    var counter = 0
     
     @IBOutlet weak var president: UIImageView!
     @IBOutlet weak var vicePresident: UIImageView!
@@ -32,7 +33,9 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
     @IBOutlet weak var greentext1: UILabel!
     @IBOutlet weak var greentext2: UILabel!
     
+    @IBOutlet weak var easteregg: UILabel!
     @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var vasanth: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +74,52 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
         self.greenTeam2.alpha = 0
         scrollview.contentSize.height = 1000
         
+        let tappedTitle: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MoreOptionsViewController.titletapped))
+        tappedTitle.numberOfTapsRequired = 1
+        easteregg.addGestureRecognizer(tappedTitle)
+        vasanth.hidden = true
+        easteregg.userInteractionEnabled = true
+        
+        
+        // Set vertical effect
+        
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
+                                                               type: .TiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -40
+        verticalMotionEffect.maximumRelativeValue = 40
+        
+        // Set horizontal effect
+        
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
+                                                                 type: .TiltAlongHorizontalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -40
+        horizontalMotionEffect.maximumRelativeValue = 40
+        
+        // Create group to combine both
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+        
+        // Add both effects to your view
+        vasanth.addMotionEffect(group)
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
+    
+    func titletapped(){
+        if (counter > 6) {
+        vasanth.hidden = false
+            UIView.transitionWithView(self.hoursText, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursText.text = "Trap God"}, completion: nil)
+            counter = 0
+        }
+        else {
+            counter += 1
+        }
+        debugPrint (counter)
+        print("tapped")
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
