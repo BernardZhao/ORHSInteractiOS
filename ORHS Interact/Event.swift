@@ -43,36 +43,6 @@ class Event{
         return "Event contains 5 strings"
     }
     
-    static func generateEvents(url: NSURL) -> [Event]
-    {
-        var events = [Event]()
-        let sheets = SpreadsheetIntegration()
         
-        sheets.downloadJSON(url) {
-            (data: NSData) in
-            
-            if let jsonDictionary = SpreadsheetIntegration.parseJSONFromData(data){
-                
-                let eventDictionaries = jsonDictionary["feed"]!["entry"] as! [[String: AnyObject]]
-                for x in 0...eventDictionaries.count + 1 {
-                    var newEvent = [String]()
-                    for y in 0...4{
-                        let test: String = eventDictionaries[y]["content"]!["$t"] as! String
-                        let myStringArray = test.componentsSeparatedByString(", _")
-                        newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(7)))
-                    }
-                    
-                    events.append(Event(myEvents: newEvent))
-                    print (events[x].name)
-                }
-                
-            }
-            
-        }
-        debugPrint(events)
-        return events
-        
-    }
-    
 
 }

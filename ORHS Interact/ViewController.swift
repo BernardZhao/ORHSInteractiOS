@@ -59,7 +59,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         refreshInterface()
 	}
     @IBAction func disconnectWasPressed(sender: AnyObject) {
+		GIDSignIn.sharedInstance().signOut()
         GIDSignIn.sharedInstance().disconnect()
+		debugPrint("User disconnected")
+		refreshInterface()
     }
     @IBAction func returnWasPressed(sender: AnyObject) {
 		self.performSegueWithIdentifier("LoginSegue", sender: self)

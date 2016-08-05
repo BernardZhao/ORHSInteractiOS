@@ -18,6 +18,9 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
     @IBOutlet weak var eventsCoordinator: UIImageView!
     @IBOutlet weak var secretary: UIImageView!
     @IBOutlet weak var treasurer: UIImageView!
+    @IBOutlet weak var mediaCoordinator: UIImageView!
+    @IBOutlet weak var greenTeam1: UIImageView!
+    @IBOutlet weak var greenTeam2: UIImageView!
     
     @IBOutlet weak var vpText: UILabel!
     @IBOutlet weak var presText: UILabel!
@@ -25,6 +28,9 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
     @IBOutlet weak var eventsText: UILabel!
     @IBOutlet weak var secText: UILabel!
     @IBOutlet weak var tresText: UILabel!
+    @IBOutlet weak var mediaText: UILabel!
+    @IBOutlet weak var greentext1: UILabel!
+    @IBOutlet weak var greentext2: UILabel!
     
     @IBOutlet weak var scrollview: UIScrollView!
     
@@ -60,6 +66,9 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
         self.eventsCoordinator.alpha = 0
         self.secretary.alpha = 0
         self.treasurer.alpha = 0
+        self.mediaCoordinator.alpha = 0
+        self.greenTeam1.alpha = 0
+        self.greenTeam2.alpha = 0
         scrollview.contentSize.height = 1000
         
     }
@@ -124,6 +133,9 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
             self.eventsCoordinator.alpha = 1.0
             self.secretary.alpha = 1.0
             self.treasurer.alpha = 1.0
+            self.mediaCoordinator.alpha = 1.0
+            self.greenTeam1.alpha = 1
+            self.greenTeam2.alpha = 1
             
         })
     }

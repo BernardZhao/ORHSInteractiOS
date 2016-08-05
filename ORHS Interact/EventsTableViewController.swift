@@ -211,14 +211,22 @@ class EventsTableViewController: UITableViewController
             if let jsonDictionary = SpreadsheetIntegration.parseJSONFromData(data){
                 
                 let eventDictionaries = jsonDictionary["feed"]!["entry"] as! [[String: AnyObject]]
-                for x in 0...eventDictionaries.count + 1 {
+                
+                let pretest: String = eventDictionaries[0]["content"]!["$t"] as! String
+                let preMyStringArray = pretest.componentsSeparatedByString(", _")
+                
+                print(preMyStringArray.count)
+                
+                for x in 0...preMyStringArray.count-1 {
                     var newEvent = [String]()
                     for y in 0...4{
                         let test: String = eventDictionaries[y]["content"]!["$t"] as! String
                         let myStringArray = test.componentsSeparatedByString(", _")
+                        print (myStringArray.count)
                         // this if statement cuts off the extra space left in the first string that was separated.
                         if (x == 0){
-                        newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(8)))                        }
+                        newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(8)))
+                        }
                         else {
                         newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(7)))
                         }
