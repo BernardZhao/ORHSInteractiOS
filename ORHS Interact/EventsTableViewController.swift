@@ -173,11 +173,13 @@ class EventsTableViewController: UITableViewController
         print (date)
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "ha MMMM d, y"
+        dateFormatter.dateFormat = "h:mma MMMM d, y"
         
         
         let startDate = dateFormatter.dateFromString(date!)
+        print("this the startDate")
         print(startDate)
+
         let endDate = startDate!.dateByAddingTimeInterval(60 * 60) // One hour
         
         if (EKEventStore.authorizationStatusForEntityType(.Event) != EKAuthorizationStatus.Authorized) {

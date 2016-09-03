@@ -38,7 +38,7 @@ class CustomNavigation: UINavigationController {
         let spacer2 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
         spacer.width = -16
         
-        let moreOptionsButton = UIButton(frame: CGRectMake(0,0,5,20))
+        let moreOptionsButton = UIButton(frame: CGRectMake(0,0,5.5,20))
         let moreOptionsImage = UIImage(named: "threedots-2")
         let tintedMoreOptionsButton = moreOptionsImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         

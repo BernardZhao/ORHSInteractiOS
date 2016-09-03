@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         picture.clipsToBounds = true
         nameLabel.text = GIDSignIn.sharedInstance().currentUser.profile.name
         hoursDescription.hidden = true
+        hoursButton.titleLabel?.textAlignment = NSTextAlignment.Center
         
         let tabBarController = self.tabBarController
         tabBarController?.setupSwipeGestureRecognizers(true)
@@ -140,7 +141,7 @@ class HomeViewController: UIViewController {
                 debugPrint("wtf")
                 dispatch_async(dispatch_get_main_queue()) {
                     self.hoursButton.titleLabel!.font = UIFont(name: "System", size: 30)
-                    UIView.transitionWithView(self.hoursButton, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursButton.setTitle("It appears no recorded hours could be found", forState: .Normal)}, completion: nil)
+                    UIView.transitionWithView(self.hoursButton, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursButton.setTitle("It appears no recorded hours could be found.", forState: .Normal)}, completion: nil)
                     
                 }
                 }
