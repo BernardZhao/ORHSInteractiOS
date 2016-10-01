@@ -15,7 +15,7 @@ import EventKit
 class EventsTableViewController: UITableViewController
 {
     var events = [Event]()
-    let eventsURL: NSURL = NSURL(string: "https://spreadsheets.google.com/feeds/list/1uTxOe8usrx7o460tH3BAL5iPZRVmEyulkIoyGHa_FsQ/od6/public/values?alt=json")!
+    let eventsURL: URL = URL(string: "https://spreadsheets.google.com/feeds/list/1lCS6UsbWjTD0J-M7LACeKhd42BZFn8M4QNHnGRVl_cQ/od6/public/values?alt=json")!
     var tapGestureRecognizer: UITapGestureRecognizer? = nil
     var mapItem: MKMapItem?
     let geoCoder = CLGeocoder()
@@ -30,41 +30,41 @@ class EventsTableViewController: UITableViewController
         self.generateEvents(eventsURL)
         self.tableView.reloadData()
 
-        tableView.rowHeight = 125
+        tableView.rowHeight = 150
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .SingleLine
+        tableView.separatorStyle = .singleLine
         
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    override func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
 
         return events.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as! EventListCell
-        cell.locationBackground?.userInteractionEnabled = true
-        cell.locationBackground?.tag = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) as! EventListCell
+        cell.locationBackground?.isUserInteractionEnabled = true
+        cell.locationBackground?.tag = (indexPath as NSIndexPath).row
         let tappedImage: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.imageTapped))
         tappedImage.numberOfTapsRequired = 1
         cell.locationBackground?.addGestureRecognizer(tappedImage)
-        cell.eventDate?.userInteractionEnabled = true
-        cell.eventDate?.tag = indexPath.row
+        cell.eventDate?.isUserInteractionEnabled = true
+        cell.eventDate?.tag = (indexPath as NSIndexPath).row
         
         let tappedDate: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EventsTableViewController.dateTapped))
         tappedDate.numberOfTapsRequired = 1
@@ -72,39 +72,39 @@ class EventsTableViewController: UITableViewController
         
         
         
-        let event = self.events[indexPath.row]
+        let event = self.events[(indexPath as NSIndexPath).row]
         
         cell.event = event
 
         return cell
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.animate(cell)
     }
     
     // MARK: - UITableViewDelegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:
-        NSIndexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath:
+        IndexPath)
     {
-        let selectedEvent = self.events[indexPath.row]
+        let selectedEvent = self.events[(indexPath as NSIndexPath).row]
         
         // import SafariServices
-        let safariVC = SFSafariViewController(URL: selectedEvent.link!)
+        let safariVC = SFSafariViewController(url: selectedEvent.link! as URL)
         safariVC.view.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
         safariVC.delegate = self
-        self.presentViewController(safariVC, animated: true, completion: nil)
+        self.present(safariVC, animated: true, completion: nil)
     }
     
     // MARK: - Target / Action
-    func imageTapped(sender: UITapGestureRecognizer){
+    func imageTapped(_ sender: UITapGestureRecognizer){
         print("Image has been tapped")
         
         
-        let tapLocation = sender.locationInView(self.tableView)
-        let indexPath = self.tableView.indexPathForRowAtPoint(tapLocation)
-        let address = self.events[indexPath!.row].location
+        let tapLocation = sender.location(in: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: tapLocation)
+        let address = self.events[(indexPath! as NSIndexPath).row].location
         
         geoCoder.geocodeAddressString(address!, completionHandler: {(placemarks, error) -> Void in
             if((error) != nil){
@@ -117,21 +117,21 @@ class EventsTableViewController: UITableViewController
                 let regionDistance:CLLocationDistance = 10000
                 let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
                 let options = [
-                    MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
-                    MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+                    MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+                    MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
                 ]
                 let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
                 let mapItem = MKMapItem(placemark: placemark)
-                if let mapName = self.events[indexPath!.row].name {
+                if let mapName = self.events[(indexPath! as NSIndexPath).row].name {
                 mapItem.name = "\(mapName)"
                 }
-                mapItem.openInMapsWithLaunchOptions(options)
+                mapItem.openInMaps(launchOptions: options)
             }
         })
         
     }
     
-    func createEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate) {
+    func createEvent(_ eventStore: EKEventStore, title: String, startDate: Date, endDate: Date) {
         let event = EKEvent(eventStore: eventStore)
         
         event.title = title
@@ -140,17 +140,17 @@ class EventsTableViewController: UITableViewController
         event.calendar = eventStore.defaultCalendarForNewEvents
         
         
-        let alertController = UIAlertController(title: title, message: "Do you want to add this event to your calendar?", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: title, message: "Do you want to add this event to your calendar?", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             // ...
         }
         alertController.addAction(cancelAction)
         
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
             print("eventAdded")
             do {
-                try eventStore.saveEvent(event, span: .ThisEvent)
+                try eventStore.save(event, span: .thisEvent)
                 self.savedEventId = event.eventIdentifier
             } catch {
                 print("Event failed to add")
@@ -158,64 +158,64 @@ class EventsTableViewController: UITableViewController
         }
         alertController.addAction(OKAction)
         
-        self.presentViewController(alertController, animated: true) {
+        self.present(alertController, animated: true) {
             // ...
         }
         
 
     }
-    func dateTapped(sender: UITapGestureRecognizer){
+    func dateTapped(_ sender: UITapGestureRecognizer){
         print("Date has been tapped")
         let eventStore = EKEventStore()
-        let tapLocation = sender.locationInView(self.tableView)
-        let indexPath = self.tableView.indexPathForRowAtPoint(tapLocation)
-        let date = self.events[indexPath!.row].date
+        let tapLocation = sender.location(in: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: tapLocation)
+        let date = self.events[(indexPath! as NSIndexPath).row].date
         print (date)
         
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mma MMMM d, y"
         
         
-        let startDate = dateFormatter.dateFromString(date!)
+        let startDate = dateFormatter.date(from: date!)
         print("this the startDate")
         print(startDate)
 
-        let endDate = startDate!.dateByAddingTimeInterval(60 * 60) // One hour
+        let endDate = startDate!.addingTimeInterval(60 * 60) // One hour
         
-        if (EKEventStore.authorizationStatusForEntityType(.Event) != EKAuthorizationStatus.Authorized) {
-            eventStore.requestAccessToEntityType(.Event, completion: {granted, error in
-                self.createEvent(eventStore, title: self.events[indexPath!.row].name!, startDate: startDate!, endDate: endDate)
+        if (EKEventStore.authorizationStatus(for: .event) != EKAuthorizationStatus.authorized) {
+            eventStore.requestAccess(to: .event, completion: {granted, error in
+                self.createEvent(eventStore, title: self.events[(indexPath! as NSIndexPath).row].name!, startDate: startDate!, endDate: endDate)
                 
             })
         } else {
-            self.createEvent(eventStore, title: self.events[indexPath!.row].name!, startDate: startDate!, endDate: endDate)
+            self.createEvent(eventStore, title: self.events[(indexPath! as NSIndexPath).row].name!, startDate: startDate!, endDate: endDate)
         }
         
         
     }
 
     
-    func animate(cell:UITableViewCell) {
+    func animate(_ cell:UITableViewCell) {
         let view = cell.contentView
         view.layer.opacity = 0.1
-        UIView.animateWithDuration(0.5,delay:  0, options: [.AllowUserInteraction, . CurveEaseInOut], animations: { () -> Void in
+        UIView.animate(withDuration: 0.5,delay:  0, options: .allowUserInteraction, animations: { () -> Void in
             view.layer.opacity = 1
         }, completion:nil)
     }
     
-    func generateEvents(url: NSURL)
+    func generateEvents(_ url: URL)
     {
         let sheets = SpreadsheetIntegration()
         
         sheets.downloadJSON(url) {
-            (data: NSData) in
+            (data: Data) in
             
             if let jsonDictionary = SpreadsheetIntegration.parseJSONFromData(data){
                 
                 let eventDictionaries = jsonDictionary["feed"]!["entry"] as! [[String: AnyObject]]
                 
                 let pretest: String = eventDictionaries[0]["content"]!["$t"] as! String
-                let preMyStringArray = pretest.componentsSeparatedByString(", _")
+                let preMyStringArray = pretest.components(separatedBy: ", _")
                 
                 print(preMyStringArray.count)
                 
@@ -223,14 +223,14 @@ class EventsTableViewController: UITableViewController
                     var newEvent = [String]()
                     for y in 0...4{
                         let test: String = eventDictionaries[y]["content"]!["$t"] as! String
-                        let myStringArray = test.componentsSeparatedByString(", _")
+                        let myStringArray = test.components(separatedBy: ", _")
                         print (myStringArray.count)
                         // this if statement cuts off the extra space left in the first string that was separated.
                         if (x == 0){
-                        newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(8)))
+                        newEvent.append(myStringArray[x].substring(from: myStringArray[x].characters.index(myStringArray[x].startIndex, offsetBy: 8)))
                         }
                         else {
-                        newEvent.append(myStringArray[x].substringFromIndex(myStringArray[x].startIndex.advancedBy(7)))
+                        newEvent.append(myStringArray[x].substring(from: myStringArray[x].characters.index(myStringArray[x].startIndex, offsetBy: 7)))
                         }
                     }
                     
@@ -240,7 +240,7 @@ class EventsTableViewController: UITableViewController
 
 
             }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async(execute: { () -> Void in
                 self.tableView.reloadData()
             })
 
@@ -253,7 +253,7 @@ class EventsTableViewController: UITableViewController
 
 extension EventsTableViewController : SFSafariViewControllerDelegate
 {
-    func safariViewControllerDidFinish(controller: SFSafariViewController) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

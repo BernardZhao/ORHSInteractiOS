@@ -16,7 +16,7 @@ class StyleButton: UIButton {
     }
     
     init(){
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         setUp()
     }
 
@@ -28,13 +28,13 @@ class StyleButton: UIButton {
     
     func setUp(){
         layer.borderWidth = 1
-        layer.borderColor = tintColor.CGColor
+        layer.borderColor = tintColor.cgColor
         layer.cornerRadius = 5.0
         clipsToBounds = true
-        setTitleColor(tintColor, forState: .Normal)
-        setTitleColor(UIColor.whiteColor(), forState: .Highlighted)
-        setBackgroundImage(UIImage(color: tintColor), forState: .Highlighted)
-        setTitleColor(UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0), forState: .Highlighted)
+        setTitleColor(tintColor, for: UIControlState())
+        setTitleColor(UIColor.white, for: .highlighted)
+        setBackgroundImage(UIImage(color: tintColor), for: .highlighted)
+        setTitleColor(UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0), for: .highlighted)
         // set other operations after super.init, if required
     }
 }

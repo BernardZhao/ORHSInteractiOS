@@ -9,34 +9,34 @@
 import UIKit
 
 extension UITabBarController {
-    func setupSwipeGestureRecognizers(cycleThroughTabs: Bool = false) {
+    func setupSwipeGestureRecognizers(_ cycleThroughTabs: Bool = false) {
         let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: cycleThroughTabs ? #selector(UITabBarController.handleSwipeLeftAllowingCyclingThroughTabs(_:))
             : #selector(UITabBarController.handleSwipeLeft(_:)))
-        swipeLeftGestureRecognizer.direction = .Left
+        swipeLeftGestureRecognizer.direction = .left
         self.tabBar.addGestureRecognizer(swipeLeftGestureRecognizer)
         
         let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: cycleThroughTabs ? #selector(UITabBarController.handleSwipeRightAllowingCyclingThroughTabs(_:))
             : #selector(UITabBarController.handleSwipeRight(_:)))
-        swipeRightGestureRecognizer.direction = .Right
+        swipeRightGestureRecognizer.direction = .right
         self.tabBar.addGestureRecognizer(swipeRightGestureRecognizer)
     }
     
-    func handleSwipeLeft(swipe: UISwipeGestureRecognizer) {
+    func handleSwipeLeft(_ swipe: UISwipeGestureRecognizer) {
         self.selectedIndex -= 1
     }
     
-    func handleSwipeRight(swipe: UISwipeGestureRecognizer) {
+    func handleSwipeRight(_ swipe: UISwipeGestureRecognizer) {
         self.selectedIndex += 1
     }
     
-    func handleSwipeLeftAllowingCyclingThroughTabs(swipe: UISwipeGestureRecognizer) {
+    func handleSwipeLeftAllowingCyclingThroughTabs(_ swipe: UISwipeGestureRecognizer) {
         let maxIndex = (self.viewControllers?.count ?? 0)
         let nextIndex = self.selectedIndex - 1
         self.selectedIndex = nextIndex >= 0 ? nextIndex : maxIndex - 1
         
     }
     
-    func handleSwipeRightAllowingCyclingThroughTabs(swipe: UISwipeGestureRecognizer) {
+    func handleSwipeRightAllowingCyclingThroughTabs(_ swipe: UISwipeGestureRecognizer) {
         let maxIndex = (self.viewControllers?.count ?? 0)
         let nextIndex = self.selectedIndex + 1
         self.selectedIndex = nextIndex < maxIndex ? nextIndex : 0

@@ -15,13 +15,11 @@
 		5665278D1D3ABF1D0060198A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */; };
 		568928D61D3405E400D94DD2 /* SpreadsheetIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */; };
 		568F31E31D2B0E3B00AFDEB8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */; };
-		5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
-		5697303C1D1357F100B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
-		5697303D1D1357F200B9592C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5697303A1D1357CF00B9592C /* GoogleService-Info.plist */; };
 		569B93591D2EF1B2005C52E1 /* StyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B93581D2EF1B2005C52E1 /* StyleButton.swift */; };
 		569B935B1D2EF85D005C52E1 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B935A1D2EF85D005C52E1 /* ImageExtension.swift */; };
 		56A937601D2763D100269A5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9375F1D2763D100269A5B /* HomeViewController.swift */; };
 		56A937641D27657300269A5B /* TabBarControllerSwipeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */; };
+		56AC6AC91D9F8E52008655D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56AC6AC81D9F8E52008655D4 /* GoogleService-Info.plist */; };
 		56EBC0001D42C64F0063C91E /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EBBFFF1D42C64F0063C91E /* MoreOptionsViewController.swift */; };
 		56FF34D91CFE7A5A00B6CE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */; };
 		56FF34DB1CFE7A5A00B6CE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF34DA1CFE7A5A00B6CE0E /* ViewController.swift */; };
@@ -63,12 +61,13 @@
 		5665278C1D3ABF1D0060198A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		568928D51D3405E400D94DD2 /* SpreadsheetIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetIntegration.swift; sourceTree = "<group>"; };
 		568F31E21D2B0E3B00AFDEB8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		5697303A1D1357CF00B9592C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5697303E1D135F0100B9592C /* ORHS Interact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORHS Interact-Bridging-Header.h"; sourceTree = "<group>"; };
 		569B93581D2EF1B2005C52E1 /* StyleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleButton.swift; sourceTree = "<group>"; };
 		569B935A1D2EF85D005C52E1 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = ../ImageExtension.swift; sourceTree = "<group>"; };
 		56A9375F1D2763D100269A5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerSwipeExtension.swift; sourceTree = "<group>"; };
+		56AC6AC81D9F8E52008655D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56AC6ACA1D9F8EC7008655D4 /* ORHS Interact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ORHS Interact.entitlements"; sourceTree = "<group>"; };
 		56EBBFFF1D42C64F0063C91E /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
 		56FF34D51CFE7A5A00B6CE0E /* ORHS Interact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORHS Interact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 1; };
@@ -144,7 +143,7 @@
 		56FF34CC1CFE7A5900B6CE0E = {
 			isa = PBXGroup;
 			children = (
-				5697303A1D1357CF00B9592C /* GoogleService-Info.plist */,
+				56AC6AC81D9F8E52008655D4 /* GoogleService-Info.plist */,
 				56336E0C1CFE866600D3442B /* Roboto-Regular.ttf */,
 				56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */,
 				56FF34EC1CFE7A5A00B6CE0E /* ORHS InteractTests */,
@@ -169,6 +168,7 @@
 		56FF34D71CFE7A5A00B6CE0E /* ORHS Interact */ = {
 			isa = PBXGroup;
 			children = (
+				56AC6ACA1D9F8EC7008655D4 /* ORHS Interact.entitlements */,
 				569B93581D2EF1B2005C52E1 /* StyleButton.swift */,
 				56A937631D27657300269A5B /* TabBarControllerSwipeExtension.swift */,
 				56FF34D81CFE7A5A00B6CE0E /* AppDelegate.swift */,
@@ -279,19 +279,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Web and App Development";
 				TargetAttributes = {
 					56FF34D41CFE7A5900B6CE0E = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = YMA57WXZY4;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					56FF34E81CFE7A5A00B6CE0E = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 56FF34D41CFE7A5900B6CE0E;
 					};
 					56FF34F31CFE7A5A00B6CE0E = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 56FF34D41CFE7A5900B6CE0E;
 					};
 				};
@@ -323,7 +331,7 @@
 			files = (
 				56FF34E31CFE7A5A00B6CE0E /* LaunchScreen.storyboard in Resources */,
 				56FF34E01CFE7A5A00B6CE0E /* Assets.xcassets in Resources */,
-				5697303B1D1357CF00B9592C /* GoogleService-Info.plist in Resources */,
+				56AC6AC91D9F8E52008655D4 /* GoogleService-Info.plist in Resources */,
 				56336E0D1CFE866600D3442B /* Roboto-Regular.ttf in Resources */,
 				56FF34DE1CFE7A5A00B6CE0E /* Main.storyboard in Resources */,
 			);
@@ -333,7 +341,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5697303C1D1357F100B9592C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +348,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5697303D1D1357F200B9592C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,8 +562,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -601,8 +609,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -621,6 +631,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -631,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ORHS Interact/ORHS Interact.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ORHS Interact/Info.plist";
@@ -641,6 +653,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ORHS Interact-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -650,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ORHS Interact/ORHS Interact.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ORHS Interact/Info.plist";
@@ -659,6 +673,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ORHS Interact-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -671,6 +686,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ORHS Interact.app/ORHS Interact";
 			};
 			name = Debug;
@@ -684,6 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ORHS Interact.app/ORHS Interact";
 			};
 			name = Release;
@@ -696,6 +713,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ORHS Interact";
 			};
 			name = Debug;
@@ -708,6 +726,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WAD.ORHS-InteractUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ORHS Interact";
 			};
 			name = Release;

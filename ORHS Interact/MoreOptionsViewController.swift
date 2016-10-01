@@ -39,23 +39,23 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.hidden = true
+        self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.hidesBackButton = true
-        let backButton = UIButton(frame: CGRectMake(0,0,70,70))
+        let backButton = UIButton(frame: CGRect(x: 0,y: 0,width: 70,height: 70))
         
         let backImage = UIImage(named: "backBtn")
-        let tintedBackImage = backImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        let tintedBackImage = backImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         
-        backButton.setImage(tintedBackImage, forState: UIControlState.Normal)
+        backButton.setImage(tintedBackImage, for: UIControlState())
         backButton.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
         backButton.titleEdgeInsets = UIEdgeInsetsMake(10,10,10,0)
-        backButton.setTitle("Back", forState:UIControlState.Normal)
-        backButton.setTitleColor(UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0), forState: UIControlState.Normal)
-        backButton.addTarget(self, action: #selector(MoreOptionsViewController.leftButtonFunction), forControlEvents: UIControlEvents.TouchUpInside)
+        backButton.setTitle("Back", for:UIControlState())
+        backButton.setTitleColor(UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0), for: UIControlState())
+        backButton.addTarget(self, action: #selector(MoreOptionsViewController.leftButtonFunction), for: UIControlEvents.touchUpInside)
         
         let backBarButton = UIBarButtonItem(customView: backButton)
         
-        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
         spacer.width = -15
 
             
@@ -77,21 +77,21 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
         let tappedTitle: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MoreOptionsViewController.titletapped))
         tappedTitle.numberOfTapsRequired = 1
         easteregg.addGestureRecognizer(tappedTitle)
-        vasanth.hidden = true
-        easteregg.userInteractionEnabled = true
+        vasanth.isHidden = true
+        easteregg.isUserInteractionEnabled = true
         
         
         // Set vertical effect
         
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
-                                                               type: .TiltAlongVerticalAxis)
+                                                               type: .tiltAlongVerticalAxis)
         verticalMotionEffect.minimumRelativeValue = -40
         verticalMotionEffect.maximumRelativeValue = 40
         
         // Set horizontal effect
         
         let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
-                                                                 type: .TiltAlongHorizontalAxis)
+                                                                 type: .tiltAlongHorizontalAxis)
         horizontalMotionEffect.minimumRelativeValue = -40
         horizontalMotionEffect.maximumRelativeValue = 40
         
@@ -108,8 +108,8 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
     
     func titletapped(){
         if (counter > 6) {
-        vasanth.hidden = false
-            UIView.transitionWithView(self.hoursText, duration: 0.5, options: [.TransitionCrossDissolve], animations: {self.hoursText.text = "Trap God"}, completion: nil)
+        vasanth.isHidden = false
+            UIView.transition(with: self.hoursText, duration: 0.5, options: [.transitionCrossDissolve], animations: {self.hoursText.text = "Trap God"}, completion: nil)
             counter = 0
         }
         else {
@@ -126,22 +126,22 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
         // Dispose of any resources that can be recreated.
     }
     
-    func leftButtonFunction(sender: UIBarButtonItem) {
+    func leftButtonFunction(_ sender: UIBarButtonItem) {
         // Perform your custom actions
-        self.tabBarController?.tabBar.hidden = false
+        self.tabBarController?.tabBar.isHidden = false
         // Go back to the previous ViewController
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func reportABugWasPressed(sender: AnyObject) {
+    @IBAction func reportABugWasPressed(_ sender: AnyObject) {
         self.sendEmail(bugemail, subject: "Bug feedback")
         
     }
-    @IBAction func contactAnOfficerWasPressed(sender: AnyObject) {
+    @IBAction func contactAnOfficerWasPressed(_ sender: AnyObject) {
         self.sendEmail(officeremail, subject: "Officer feedback")
     }
 
     
-    func sendEmail(url: String, subject: String) {
+    func sendEmail(_ url: String, subject: String) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
@@ -149,32 +149,32 @@ class MoreOptionsViewController: UIViewController , MFMailComposeViewControllerD
             mail.setToRecipients([url])
             mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
             
-            presentViewController(mail, animated: true, completion: nil)
+            present(mail, animated: true, completion: nil)
         } else {
             // show failure alert
             print("email failure")
         }
     }
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         switch result {
-        case MFMailComposeResultCancelled:
+        case MFMailComposeResult.cancelled:
             print("Mail cancelled")
-        case MFMailComposeResultSaved:
+        case MFMailComposeResult.saved:
             print("Mail saved")
-        case MFMailComposeResultSent:
+        case MFMailComposeResult.sent:
             print("Mail sent")
-        case MFMailComposeResultFailed:
+        case MFMailComposeResult.failed:
             print("Mail sent failure: \(error?.localizedDescription)")
         default:
             break
         }
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(1, animations: {
+        UIView.animate(withDuration: 1, animations: {
             self.vicePresident.alpha = 1.0
             self.president.alpha = 1.0
             self.hoursCoordinator.alpha = 1.0

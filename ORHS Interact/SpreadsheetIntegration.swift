@@ -19,8 +19,8 @@ class SpreadsheetIntegration{
     var descriptionList = [String]()
     var hours = Int()
     */
-    lazy var configuration: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
-    lazy var session: NSURLSession = NSURLSession(configuration: self.configuration)
+    lazy var configuration: URLSessionConfiguration = URLSessionConfiguration.default
+    lazy var session: URLSession = URLSession(configuration: self.configuration)
     
 
     
@@ -30,15 +30,15 @@ class SpreadsheetIntegration{
     
     
     
-    typealias DataHandler = (NSData -> Void)
+    typealias DataHandler = ((Data) -> Void)
     
-    func downloadJSON(input: NSURL, completion: DataHandler)
+    func downloadJSON(_ input: URL, completion: @escaping DataHandler)
     {
-        let request = NSURLRequest(URL: input)
-        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) in
+        let request = URLRequest(url: input)
+        let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
             
             if error == nil {
-                if let httpResponse = response as? NSHTTPURLResponse {
+                if let httpResponse = response as? HTTPURLResponse {
                     switch (httpResponse.statusCode) {
                     case 200:
                         if let data = data {
@@ -51,7 +51,7 @@ class SpreadsheetIntegration{
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
-        }
+        }) 
         
         dataTask.resume()
     }
@@ -62,11 +62,11 @@ class SpreadsheetIntegration{
 
 extension SpreadsheetIntegration
 {
-    static func parseJSONFromData(jsonData: NSData?) -> [String : AnyObject]?
+    static func parseJSONFromData(_ jsonData: Data?) -> [String : AnyObject]?
     {
         if let data = jsonData {
             do {
-                let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? [String : AnyObject]
+                let jsonDictionary = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : AnyObject]
                 return jsonDictionary
                 
             } catch let error as NSError {

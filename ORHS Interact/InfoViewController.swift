@@ -20,9 +20,9 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        aboutInteract.editable = false
-        behindtheScenes.editable = false
-        aboutBehindtheScenes.editable = false
+        aboutInteract.isEditable = false
+        behindtheScenes.isEditable = false
+        aboutBehindtheScenes.isEditable = false
         
 
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,18 +33,18 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func joinPressed(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://goo.gl/forms/k9uHclWR4jazJjYj2")!)
+    @IBAction func joinPressed(_ sender: AnyObject) {
+        UIApplication.shared.openURL(URL(string: "https://goo.gl/forms/k9uHclWR4jazJjYj2")!)
     }
     
-    @IBAction func websitePressed(sender: AnyObject) {
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://orhsinteract.com")!)
+    @IBAction func websitePressed(_ sender: AnyObject) {
+                UIApplication.shared.openURL(URL(string: "https://orhsinteract.com")!)
     }
 
-    @IBAction func resourcesPressed(sender: AnyObject) {
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://drive.google.com/folderview?id=0BwJLvdTM6Ac4UWlqSHlKTGhxRFk&usp=sharing")!)
+    @IBAction func resourcesPressed(_ sender: AnyObject) {
+                UIApplication.shared.openURL(URL(string: "https://drive.google.com/folderview?id=0BwJLvdTM6Ac4UWlqSHlKTGhxRFk&usp=sharing")!)
     }
-    @IBAction func githubPressed(sender: AnyObject) {
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/ORHS-Web-App-Dev")!)
+    @IBAction func githubPressed(_ sender: AnyObject) {
+                UIApplication.shared.openURL(URL(string: "https://github.com/ORHS-Web-App-Dev")!)
     }
 }
