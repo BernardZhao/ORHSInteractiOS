@@ -22,6 +22,7 @@ class EventsTableViewController: UITableViewController
     let tapRec = UITapGestureRecognizer()
     var coords: CLLocationCoordinate2D? = nil
     var savedEventId : String = " "
+    var dateFormat = "h:mma MMMM d, y"
     
     override func viewDidLoad()
     {
@@ -34,7 +35,6 @@ class EventsTableViewController: UITableViewController
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .singleLine
-        
         
     }
     
@@ -72,6 +72,7 @@ class EventsTableViewController: UITableViewController
         
         
         
+        
         let event = self.events[(indexPath as NSIndexPath).row]
         
         cell.event = event
@@ -80,7 +81,17 @@ class EventsTableViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        self.animate(cell)
+        print(self.events[indexPath.row].date)
+        print("Event date \(getDateObject(date: self.events[indexPath.row].date!))")
+        print("Current date \(NSDate())")
+        
+        if (getDateObject(date: self.events[indexPath.row].date!).compare(NSDate() as Date) == .orderedAscending){
+            print("Event \(self.events[indexPath.row].name!) is over.")
+            self.animate(cell, 0.2)
+        }
+        else{
+        self.animate(cell, 1)
+        }
     }
     
     // MARK: - UITableViewDelegate
@@ -89,12 +100,14 @@ class EventsTableViewController: UITableViewController
         IndexPath)
     {
         let selectedEvent = self.events[(indexPath as NSIndexPath).row]
-        
-        // import SafariServices
+        UIApplication.shared.openURL(selectedEvent.link!
+        )        // import SafariServices
+        /*
         let safariVC = SFSafariViewController(url: selectedEvent.link! as URL)
         safariVC.view.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
         safariVC.delegate = self
         self.present(safariVC, animated: true, completion: nil)
+        */
     }
     
     // MARK: - Target / Action
@@ -130,6 +143,8 @@ class EventsTableViewController: UITableViewController
         })
         
     }
+    
+
     
     func createEvent(_ eventStore: EKEventStore, title: String, startDate: Date, endDate: Date) {
         let event = EKEvent(eventStore: eventStore)
@@ -171,7 +186,8 @@ class EventsTableViewController: UITableViewController
         let indexPath = self.tableView.indexPathForRow(at: tapLocation)
         let date = self.events[(indexPath! as NSIndexPath).row].date
         print (date)
-        
+        let startDate = getDateObject(date: date!)
+        /*
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mma MMMM d, y"
         
@@ -179,27 +195,38 @@ class EventsTableViewController: UITableViewController
         let startDate = dateFormatter.date(from: date!)
         print("this the startDate")
         print(startDate)
-
-        let endDate = startDate!.addingTimeInterval(60 * 60) // One hour
+        */
+        
+        let endDate = startDate.addingTimeInterval(60 * 60) // One hour
         
         if (EKEventStore.authorizationStatus(for: .event) != EKAuthorizationStatus.authorized) {
             eventStore.requestAccess(to: .event, completion: {granted, error in
-                self.createEvent(eventStore, title: self.events[(indexPath! as NSIndexPath).row].name!, startDate: startDate!, endDate: endDate)
+                self.createEvent(eventStore, title: self.events[(indexPath! as NSIndexPath).row].name!, startDate: startDate, endDate: endDate)
                 
             })
         } else {
-            self.createEvent(eventStore, title: self.events[(indexPath! as NSIndexPath).row].name!, startDate: startDate!, endDate: endDate)
+            self.createEvent(eventStore, title: self.events[(indexPath! as NSIndexPath).row].name!, startDate: startDate, endDate: endDate)
         }
         
         
     }
 
+    func getDateObject(date: String) -> Date{
+        print (date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mma MMMM d, y"
+        let startDate = dateFormatter.date(from: date)
+        print("this the startDate")
+        print(startDate)
+        
+        return startDate!
+    }
     
-    func animate(_ cell:UITableViewCell) {
+    func animate(_ cell:UITableViewCell, _ opacity:Float) {
         let view = cell.contentView
         view.layer.opacity = 0.1
-        UIView.animate(withDuration: 0.5,delay:  0, options: .allowUserInteraction, animations: { () -> Void in
-            view.layer.opacity = 1
+        UIView.animate(withDuration: 1,delay:  0, options: .allowUserInteraction, animations: { () -> Void in
+            view.layer.opacity = opacity
         }, completion:nil)
     }
     

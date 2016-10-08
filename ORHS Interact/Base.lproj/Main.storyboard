@@ -1214,7 +1214,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbZ-xF-yjQ" customClass="CustomNavigation" customModule="ORHS_Interact" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home-50.png" selectedImage="home_filled-50.png" id="yTa-ae-QoY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zLx-5I-jjn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zLx-5I-jjn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1234,7 +1234,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OWk-e1-cag" customClass="CustomNavigation" customModule="ORHS_Interact" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="calendar-50.png" selectedImage="calendar_filled-50.png" id="CNI-1k-31f"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ra2-tq-MGf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ra2-tq-MGf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1254,7 +1254,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="66l-pJ-oNo" customClass="CustomNavigation" customModule="ORHS_Interact" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info-50.png" selectedImage="info_filled-50.png" id="Dkr-ai-nCK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bWt-ZS-3n8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bWt-ZS-3n8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
