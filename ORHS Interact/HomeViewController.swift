@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
         
         let tabBarController = self.tabBarController
         tabBarController?.setupSwipeGestureRecognizers(true)
+        
         self.findHours(hoursURL, name: GIDSignIn.sharedInstance().currentUser.profile.name)
         
  

@@ -1090,7 +1090,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zachary" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-27-Yq8">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-27-Yq8">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="3Jt-0k-Dzu"/>
                                     <constraint firstAttribute="width" constant="150" id="9w5-si-GTs"/>
