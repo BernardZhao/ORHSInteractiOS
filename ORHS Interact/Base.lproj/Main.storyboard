@@ -435,7 +435,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0l0-Ui-Zft" id="uYE-bL-zjh">
-                                    <frame key="frameInset" width="414" height="149"/>
+                                    <frame key="frameInset" width="414" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbackground" translatesAutoresizingMaskIntoConstraints="NO" id="Cdl-52-cnm">
@@ -1090,7 +1090,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-27-Yq8">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zachary" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-27-Yq8">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="3Jt-0k-Dzu"/>
                                     <constraint firstAttribute="width" constant="150" id="9w5-si-GTs"/>

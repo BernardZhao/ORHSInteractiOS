@@ -63,7 +63,7 @@ class CustomNavigation: UINavigationController {
     func leftButtonFunction(){
         debugPrint("Gotta go back")
         self.dismiss(animated: true, completion: {});
-        self.navigationController?.popToRootViewController(animated: true)
+        self.popToRootViewController(animated: true)
         
     }
     

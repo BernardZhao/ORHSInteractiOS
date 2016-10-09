@@ -31,14 +31,13 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         myTimer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(HomeViewController.imageFlipper), userInfo: nil, repeats: true)
+        
         flipperImages = [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!,]
         flipper.alpha = 0.8
-        picture.image = UIImage(data: try! Data(contentsOf: GIDSignIn.sharedInstance().currentUser.profile.imageURL(withDimension: 150)))
-        picture.layer.cornerRadius = picture.frame.height/2
-        picture.layer.borderWidth = 1
-        picture.layer.masksToBounds = false
-        picture.layer.borderColor = UIColor.darkGray.cgColor
-        picture.clipsToBounds = true
+        
+        self.profilePic()
+
+ 
         nameLabel.text = GIDSignIn.sharedInstance().currentUser.profile.name
         hoursDescription.isHidden = true
         hoursButton.titleLabel?.textAlignment = NSTextAlignment.center
@@ -69,6 +68,20 @@ class HomeViewController: UIViewController {
         // Add both effects to your view
         flipper.addMotionEffect(group)
     }
+    
+    func profilePic() {
+        print("DUSTIN \(GIDSignIn.sharedInstance().currentUser.profile.imageURL(withDimension: 150))")
+        self.picture.image = UIImage(data: try! Data(contentsOf: GIDSignIn.sharedInstance().currentUser.profile.imageURL(withDimension: 150)))
+        
+        
+        self.view.layoutIfNeeded()
+        self.picture.layer.cornerRadius = picture.frame.width/2
+        self.picture.layer.borderWidth = 1
+        self.picture.layer.borderColor = UIColor.darkGray.cgColor
+        self.picture.layer.masksToBounds = false
+        self.picture.clipsToBounds = true
+    }
+    
     
     func imageFlipper() {
 
