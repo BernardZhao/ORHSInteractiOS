@@ -81,7 +81,7 @@ class EventsTableViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print(self.events[indexPath.row].date)
+        print(self.events[indexPath.row].date!)
         print("Event date \(getDateObject(date: self.events[indexPath.row].date!))")
         print("Current date \(NSDate())")
         
@@ -121,7 +121,7 @@ class EventsTableViewController: UITableViewController
         
         geoCoder.geocodeAddressString(address!, completionHandler: {(placemarks, error) -> Void in
             if((error) != nil){
-                print("Error", error)
+                print("Error", error!)
             }
             if let placemark = placemarks?.first {
                 let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
@@ -185,7 +185,7 @@ class EventsTableViewController: UITableViewController
         let tapLocation = sender.location(in: self.tableView)
         let indexPath = self.tableView.indexPathForRow(at: tapLocation)
         let date = self.events[(indexPath! as NSIndexPath).row].date
-        print (date)
+        print (date!)
         let startDate = getDateObject(date: date!)
         /*
         let dateFormatter = DateFormatter()
@@ -217,7 +217,7 @@ class EventsTableViewController: UITableViewController
         dateFormatter.dateFormat = "h:mma MMMM d, y"
         let startDate = dateFormatter.date(from: date)
         print("this the startDate")
-        print(startDate)
+        print(startDate!)
         
         return startDate!
     }
@@ -262,7 +262,7 @@ class EventsTableViewController: UITableViewController
                     }
                     
                     self.events.append(Event(myEvents: newEvent))
-                    print (self.events[x].name)
+                    print (self.events[x].name!)
                 }
 
 

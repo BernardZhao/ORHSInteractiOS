@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCalendarsUsageDescription</key>
-	<string>The app adds Interact apps to your personal calendar</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.53326814599-bsrf5065qh4fkgj5am2fm5oslp6oovk6</string>
+				<string>com.googleusercontent.apps.265844943048-h6j9bbj8mmcflufhi262jkhvbsacpo4r</string>
 			</array>
 		</dict>
 		<dict>
@@ -35,7 +33,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.WAD.ORHS-Interact</string>
+				<string>com.WAD.ORHSInteract</string>
 			</array>
 		</dict>
 	</array>
