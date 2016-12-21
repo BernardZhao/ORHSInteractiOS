@@ -100,8 +100,12 @@ class EventsTableViewController: UITableViewController
         IndexPath)
     {
         let selectedEvent = self.events[(indexPath as NSIndexPath).row]
-        UIApplication.shared.openURL(selectedEvent.link!
-        )        // import SafariServices
+        
+        let string = URL(string : "googlesheets://\(selectedEvent.link!)")
+        UIApplication.shared.openURL(string!)
+        UIApplication.shared.openURL(selectedEvent.link!)
+        
+        // import SafariServices
         /*
         let safariVC = SFSafariViewController(url: selectedEvent.link! as URL)
         safariVC.view.tintColor = UIColor(red:1.00, green:1.00, blue:0.60, alpha:1.0)
@@ -224,7 +228,7 @@ class EventsTableViewController: UITableViewController
     
     func animate(_ cell:UITableViewCell, _ opacity:Float) {
         let view = cell.contentView
-        view.layer.opacity = 0.1
+        view.layer.opacity = 0
         UIView.animate(withDuration: 1,delay:  0, options: .allowUserInteraction, animations: { () -> Void in
             view.layer.opacity = opacity
         }, completion:nil)
